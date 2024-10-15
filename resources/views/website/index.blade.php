@@ -89,8 +89,8 @@
                         decisions</p>
                 </div>
 
-                <form class="relative z-50 px-1 md:px-10 rounded-lg flex w-full md:w-3/6"
-                    aria-label="Query Submission Form">
+                <form enctype="multipart/form-data" action="{{ route('query') }}" method="POST" class="relative z-50 px-1 md:px-10 rounded-lg flex w-full md:w-3/6" aria-label="Query Submission Form">
+                    @csrf
                     <div class="bg-white z-50 w-full flex py-1 border-2 border-primary rounded-xl px-2">
                         <input type="file" name="file" id="file-input" hidden>
                         <button id="file-button"

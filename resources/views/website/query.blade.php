@@ -28,7 +28,7 @@
                         class="bg-transparent flex-grow p-2 py-5 px-3 font-sans border-none outline-none resize-none"
                         name="query" id="query" rows="1" placeholder="Type your query here..."
                         oninput="this.style.height = 'auto'; this.style.height = `${this.scrollHeight}px`;"
-                        aria-label="Input query"></textarea>
+                        aria-label="Input query">{{ $question->text ?? '' }}</textarea>
                     <button
                         class="group hover:bg-gray/30 self-center h-10 w-10 text-white p-2 rounded-full flex items-center justify-center hover:bg-opacity-90"
                         type="submit" aria-label="Submit question" title="Edit this">
@@ -43,25 +43,15 @@
                     </button>
                 </div>
             </form>
-
+            <h3></h3>
             <!-- details -->
             <div class="px-4">
-                <p>Expanded question: What are the health risks associated with glucagon-like peptide-1 receptor
-                    agonists
-                    like Ozempic and Mounjaro?
+                <p class="text-lg mb-5 text-primary font-semibold">{{ $question->text ?? '' }}
                 </p>
-                <span title="time answers" class="text-gray">Answered on April 19, 2024</span>
+                {{-- <span title="time answers" class="text-gray">Answered on April 19, 2024</span> --}}
                 <div class="mt-4 flex flex-col gap-y-3">
-                    <p>Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide (Ozempic) and
-                        tirzepatide (Mounjaro) are associated with several health risks. The most common adverse events
-                        are gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and abdominal
-                        pain.[1-2] There is also a risk of pancreatitis and biliary disease.[1] Hypersensitivity
-                        reactions, including anaphylaxis and angioedema, have been reported.[1][3] Renal adverse events,
-                        most commonly associated with severe GI losses, may occur.[1] When used with sulfonylureas or
-                        insulin, there is an increased risk of hypoglycemia.[1] An increased risk of diabetic
-                        retinopathy has been noted with semaglutide.[1][4]
-                    </p>
-                    <p>However, pooled analysis from cardiovascular outcome trials has shown no increased risk of acute
+                    <p>{{ $question->response ?? '' }}</p>
+                    {{-- <p>However, pooled analysis from cardiovascular outcome trials has shown no increased risk of acute
                         pancreatitis or pancreatic cancer associated with GLP-1 RA treatment.[5] A pharmacovigilance
                         study using the FDA Adverse Event Reporting System suggested an association between GLP-1 RAs
                         and pancreatic carcinoma, but this requires further investigation.[6] In contrast, a
@@ -76,9 +66,9 @@
                     <p>In summary, while GLP-1 RAs have been associated with a variety of adverse events, particularly
                         gastrointestinal and potential risks to the pancreas and gallbladder, large-scale studies and
                         trials have provided mixed results regarding the severity and incidence of these risks.
-                        Monitoring and patient selection are important when considering GLP-1 RA therapy.</p>
+                        Monitoring and patient selection are important when considering GLP-1 RA therapy.</p> --}}
                 </div>
-                <div class="mt-4 flex gap-x-8">
+                {{-- <div class="mt-4 flex gap-x-8">
                     <span class="flex gap-x-1 hover:bg-amber-50 cursor-pointer"  id="shareBtn">
                         <svg class="w-6 h-6 rotate-180 fill-gray" focusable="false" aria-hidden="true"
                             viewBox="0 0 24 24" data-testid="ReplyIcon">
@@ -104,7 +94,7 @@
                         </svg>
                         <p> Not Helpful</p>
                     </span>
-                </div>
+                </div> --}}
                 <!-- horiziotal line -->
                 <hr class="text-gray/40 mt-3">
 
@@ -286,8 +276,12 @@
 
     <section class=" fixed left-0 bottom-0 flex items-end h-52 w-full ">
         <div class="px-1 shadow w-full md:px-10 flex justify-center border-t border-gray/30 backdrop-blur-2xl z-50">
-            <form class="relative z-50 flex w-full md:w-3/5 py-2" method="POST" aria-label="Query Submission Form">
+            <form enctype="multipart/form-data" action="{{ route('query') }}" method="POST" class="relative z-50 flex w-full md:w-3/5 py-2" aria-label="Query Submission Form">
+                @csrf
                 <div class="bg-white z-50 w-full flex py-1 border border-gray/40 rounded-3xl shadow px-2">
+                    @guest
+                    <input type="hidden" value="login_first" name="login">
+                    @endguest
                     <input type="file" name="file" id="file-input" hidden>
                     <textarea
                         class="bg-transparent flex-grow p-2 py-3 px-3 font-sans border-none outline-none resize-none"

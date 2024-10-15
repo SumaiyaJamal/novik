@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Artisan;
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/sponsers', [WebsiteController::class, 'sponsers'])->name('sponsers');
 Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
-Route::get('/query', [WebsiteController::class, 'query'])->name('query');
+Route::get('/query-detail/{id}', [WebsiteController::class, 'query'])->name('query_detail');
+Route::post('/query', [WebsiteController::class, 'querySubmit'])->name('query');
 Route::get('/term-and-condition', [WebsiteController::class, 'terms'])->name('terms');
 Route::get('/privacy-policy', [WebsiteController::class, 'privacy'])->name('privacy');
 Route::get('/advertising', [WebsiteController::class, 'advertising'])->name('advertising');
@@ -27,7 +28,10 @@ Route::get('/clear-all', function () {
     Artisan::call('view:clear');
     return "Cache Cleared!";
 })->name('cache.clear');
-
+Route::get('/migrate', function () {
+    Artisan::call('migrate');
+    return response()->json(['message' => 'Migrations have been run successfully.']);
+});
 // Protected routes (authentication required)
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
