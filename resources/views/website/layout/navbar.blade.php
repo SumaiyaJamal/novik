@@ -14,14 +14,21 @@
                 <li>
                     <a href="{{ route('sponsers') }}" aria-label="Announcements">Sponsers</a>
                 </li>
+                @guest
                 <li>
                     <a href="{{ route('signup') }}" aria-label="Announcements">Register</a>
                 </li>
+                @endguest
             </ul>
+            @guest
             <div class="flex gap-x-2 ml-5">
                 <a href="{{ route('login') }}" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
                     aria-label="Sign Up">Login</a>
             </div>
+            @endguest
+            @auth
+            @include('website.layout.profile')
+            @endauth
         </div>
 
         <!-- Hamburger Icon -->
@@ -35,15 +42,17 @@
 
     <!-- Mobile Menu -->
     <div id="navbar" class="hidden md:hidden h-100 flex flex-col space-y-2 mt-2">
+        @guest
         <div class="flex gap-x-2 md:ms-5 w-full my-4">
-            <a href="login.html"
-                class="w-1/2 text-center hover:bg-slate-100 border bg-slate-50 px-4 py-1.5 rounded">Login</a>
-            <a href="./signup.html"
+            <a href="{{ route('login') }}" class="w-1/2 text-center hover:bg-slate-100 border bg-slate-50 px-4 py-1.5 rounded ">Login</a>
+            <a href="{{ route('signup') }}"
                 class="w-1/2 text-center hover:bg-hover bg-primary text-white px-4 py-1.5 rounded">Sign Up</a>
         </div>
-        <a href="./index.html">Home</a>
+        @endguest
+
+        <a href="{{ route('home') }}">Home</a>
         <!-- <a href="feed.html">Feed</a> -->
-        <a href="./contact.html">Contact</a>
-        <a href="./Announcements.html">Sponsers</a>
+        <a href="{{ route('contact') }}">Contact</a>
+        <a href="{{ route('sponsers') }}">Sponsers</a>
     </div>
 </nav>
