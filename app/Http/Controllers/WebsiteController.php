@@ -31,7 +31,7 @@ class WebsiteController extends Controller
     {
         return view('website.questions');
     }
-    public function cookies()
+    public function advertising()
     {
         return view('website.cookies');
     }

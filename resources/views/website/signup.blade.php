@@ -107,9 +107,11 @@
                 <input id="link-checkbox" type="checkbox" value="" name="policy"
                     class="w-4 h-4  text-primary border-gray-300 rounded focus:ring-primary focus:ring-0">
                 <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I have
-                    read and agree to the <a href="./terms.html"
-                        class="text-blue-600 dark:text-blue-500 hover:underline">Terms of Service and Privacy
-                        Policy. *</a>.</label>
+                    read and agree to the <a href="{{ route('privacy') }}"
+                        class="text-blue-600 dark:text-blue-500 hover:underline">Privacy Policy</a>,
+                        <a href="{{ route('terms') }}"
+                        class="text-blue-600 dark:text-blue-500 hover:underline">Terms</a> and <a href="{{ route('advertising') }}"
+                        class="text-blue-600 dark:text-blue-500 hover:underline">Advertising Policy</a></label>
             </div>
             @error('policy')
                 <span class="text-red-500">{{ $message }}</span>

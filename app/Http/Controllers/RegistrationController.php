@@ -37,7 +37,7 @@ class RegistrationController extends Controller
             $profile->save();
         }
         $user->assignRole('user'); // Assign the 'admin' role
-        return redirect('/')->with(['type'=> 'success', 'message'=> 'Registration Successfully']);
+        return redirect('/login')->with(['type'=> 'success', 'message'=> 'Registration Successfully']);
 
     }
     public function login()

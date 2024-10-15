@@ -29,7 +29,6 @@
                 </div>
 
                 <!-- Desktop Menu -->
-
                 <div class="text-black text-sm md:flex space-x-4 items-center" id="desktopNav">
                     <ul class="flex space-x-4">
                         <li><a href="{{ route('home') }}" aria-label="Ask">Home</a></li>
@@ -80,10 +79,6 @@
                 <a href="./sponsers.html" aria-label="Announcements">Sponsers</a>
             </div>
         </header>
-
-
-
-
         <main class="py-8 flex flex-col justify-evenly ">
             <!-- Center Content -->
             <div class="flex flex-col gap-y-4 justify-center items-center px-4 ">

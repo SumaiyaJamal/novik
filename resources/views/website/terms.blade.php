@@ -1,653 +1,501 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and conditions</title>
-    <link rel="stylesheet" href="./css/global.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    <!-- Navbar start from here -->
-    <nav class="bg-gray-800 p-2.5 px-4 md:px-16 shadow sticky top-0 z-[99999] bg-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Left Side: Logo -->
-            <div class="text-white text-lg font-bold">
-                <a href="./index.html"><img src="./public/logo.svg" class="h-10" alt="logo"></a>
-            </div>
-
-            <!-- Right Side: Links and Buttons -->
-            <div id="desktopNav" class="md:flex space-x-4 items-center text-black text-sm">
-                <ul class="flex space-x-4">
-                    <li><a href="./index.html" aria-label="Ask">Home</a></li>
-                    <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
-                    <li><a href="./contact.html" aria-label="About">Contact</a></li>
-                    <li><a href="./sponsers.html" aria-label="Announcements">Sponsers</a></li>
-                    <li><a href="./signup.html" aria-label="Announcements">Register</a></li>
-                </ul>
-                <div class="flex gap-x-2 ml-5">
-                    <a href="./login.html" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
-                        aria-label="Sign Up">Login</a>
-                </div>
-            </div>
-
-            <!-- Hamburger Icon -->
-            <button id="navbar-toggle" class="md:hidden text-black focus:outline-none">
-                <svg id="navbar-icon" class="w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="navbar" class="hidden md:hidden h-100 flex flex-col space-y-2 mt-2">
-            <div class="flex gap-x-2 md:ms-5 w-full my-4 ">
-                <a href="login.html"
-                    class="w-1/2 text-center hover:bg-slate-100 border bg-slate-50 px-4 py-1.5 rounded">Login</a>
-                <a href="./signup.html"
-                    class="w-1/2 text-center hover:bg-hover bg-primary text-white px-4 py-1.5 rounded">Sign
-                    Up</a>
-            </div>
-            <a href="./index.html">Home</a>
-            <!-- <a href="feed.html">Feed</a> -->
-            <a href="./contact.html">Contact</a>
-            <a href="./Announcements.html">Sponsers</a>
-        </div>
-    </nav>
-
+@extends('website.layout.master')
+@section('content')
     <div class="section">
         <div class="div w-full px-4 md:w-3/5 m-auto py-10">
             <main>
                 <div class="MuiContainer-root MuiContainer-maxWidthMd container_container__fs29U mui-style-1onrohr">
-                    <h1 class="text-2xl text-center font-semibold py-5">Xyla Inc. Network Terms of Use</h1>
+
+                    <h1 class="text-2xl text-center font-semibold py-5">LEGAL NOTICE AND GENERAL TERMS OF USE</h1>
                     <div class=" flex flex-col gap-4  text-justify">
-                        <strong class="py-5">Last Updated: April 30, 2024</strong>
-                        <p class="py-2">These Terms of Use (&ldquo;Terms&rdquo;) apply to your use of the websites, mobile
-                            applications and other resources provided by Xyla Inc., a Delaware Company, d/b/a
-                            OpenEvidence (hereinafter the &ldquo;Company&rdquo;) and its affiliates (referred to
-                            collectively as &ldquo;Xyla&rdquo; &ldquo;us,&rdquo; &ldquo;we&rdquo; and &ldquo;our&rdquo;)
-                            that are intended for use by healthcare professionals, which we refer to as the &ldquo;Xyla
-                            Inc.,&rdquo; including the personalized information and services that meet the needs and
-                            interests of users of the Xyla Inc. such as medical news, reference content, clinical tools,
-                            applications, sponsored programs, advertising, email communications, continuing medical
-                            education, market research opportunities and discussion forums (collectively, the
-                            &ldquo;Services&rdquo;). You will always be able to view the most current version of these
-                            Terms by clicking on the Terms of Use link at the bottom of any page of a Xyla Inc.
-                            property. Note that these Terms do not apply to our properties and services that display a
-                            link to different terms of use. In the event that we expand Xyla Inc. through our
-                            acquisition of another company and/or its properties, that company may operate its
-                            properties subject to its own terms of use accessible via a link on such properties until we
-                            integrate its practices with ours, at which point a link to these Terms will be displayed on
-                            its properties. <strong>By using the Services, you agree to these Terms, whether or not you
-                                are a registered member of the Company&rsquo;s OpenEvidence Platform. These Terms govern
-                                your use of the Services and create a binding legal agreement that we may enforce
-                                against you in the event of a violation.</strong></p>
-                        <p class="py-2"><strong>If you do not agree to all of these Terms of Use, do not use the Services!</strong>
+                        <strong class="py-5">I. GENERAL INFORMATION</strong>
+                        <p class="py-2">In compliance with the information duty set forth in Law 34/2002 of the
+                            Information Society and Electronic Commerce Services (LSSI-CE) of July 11, the following
+                            general information of this website is provided:</p>
+                        <p class="py-2">The ownership of this website, www.novik.ai, (hereinafter, the Website) is held
+                            by: BlueBioPlan SL, with NIF: B-72913379 and registered in: Commercial Registry of Murcia
+                            with the following registration data: Volume 3615, Book 0, Page 218, Sheet MU-109359, Entry
+                            1, whose representative is: VICENTE FERRER PÉREZ, and whose contact details are:</p>
+                        <ol class="my-3" style="padding-left: 10px;">
+                            <li>
+                                Address: C/ La Cruz 2, Entresuelo, Alcantarilla 30820 Murcia (Spain)
+                            </li>
+                            <li>
+                                Contact phone: 690957910
+                            </li>
+                            <li>
+                                Contact email:
+                            </li>
+                        </ol>
+
+                        <strong class="py-5">II. GENERAL TERMS AND CONDITIONS OF USE</strong>
+                        <strong class="py-3">Purpose of the conditions: The Website</strong>
+                        <p class="py-2">The purpose of these General Terms and Conditions of Use (hereinafter, Terms) is
+                            to regulate the access and use of the Website. For the purposes of these Terms, the Website
+                            shall be understood as the external appearance of the screen interfaces, both statically and
+                            dynamically, i.e., the navigation tree; and all elements integrated into both the screen
+                            interfaces and the navigation tree (hereinafter, Content) and all online services or
+                            resources that may be offered to Users (hereinafter, Services).
                         </p>
-                        <h2 class="text-2xl font-semibold mt-5">Account Registration</h2>
-                        <p class="py-2">You must register an account with Xyla Inc. to access all of the Services. Registration
-                            requires you to provide us with your name, email address, profession, specialty and other
-                            information specified in the registration form (&ldquo;Registration Information&rdquo;), and
-                            to select a username and password that will be associated with your account. You agree that
-                            your Registration Information is true, accurate, current, and complete, and you will
-                            promptly update your Registration Information as necessary so that it continues to be true,
-                            accurate, current and complete. We may attempt to verify the accuracy of the Registration
-                            Information that you have provided and update it as necessary. You are solely responsible
-                            for maintaining the confidentiality and security of your Xyla Inc. account username and
-                            password and you may not permit another person to use your username and password to access
-                            the Services. You are responsible for all activity that occurs under your account. If you
-                            believe that the security of your account information has been compromised, you should
-                            immediately change your username and password through the account settings feature or notify
-                            us and we will assist you. We shall have no liability for any unauthorized access to or use
-                            of your account information.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Use of the Services</h2>
-                        <p class="py-2">OpenEvidence is an experimental technology demonstrator. OpenEvidence does not provide
-                            medical advice, diagnosis or treatment. User questions and other inputs on OpenEvidence are
-                            not covered by HIPAA. It is the responsibility of the user to ensure questions do not
-                            contain protected health information (PHI) or any information that violates the privacy of
-                            any person. The Services are intended for physicians and other healthcare professionals. By
-                            using the Services, you represent and warrant that you have the right, authority, and
-                            capacity to agree to and abide by these Terms and that you are not prohibited from using the
-                            Services or any portion thereof.</p>
-                        <p class="py-2">The information and tools that we make available through the Services are provided for
-                            educational and informational purposes only. While we hope you find the Services useful to
-                            you as a healthcare professional, they are in no way intended to serve as a diagnostic
-                            service or platform, to provide certainty with respect to a diagnosis, to recommend a
-                            particular product or therapy or to otherwise substitute for the clinical judgment of a
-                            qualified healthcare professional. You agree that you will not use the Services with the
-                            intention of creating any kind of physician/patient relationship, e.g., to diagnose or treat
-                            users. You are solely responsible for evaluating the information obtained from the Services
-                            and for your use or misuse of such information in connection with your treatment decisions
-                            or otherwise. You agree that you shall be solely responsible for your compliance with all
-                            laws and standards of professional practice applicable to you and the practice of medicine
-                            or other relevant health profession.</p>
-                        <p class="py-2">Notwithstanding anything stated herein, you may be subject to certain obligations and
-                            responsibilities associated with the jurisdiction in which you practice medicine or another
-                            health profession. We make no representation or warranty as to the legal compliance of the
-                            Services or the Xyla or OpenEvidence Content and you are solely responsible for compliance
-                            with the laws of your jurisdiction, with respect to your use and misuse of the Services and
-                            the Xyla or OpenEvidence Content. We reserve the right, at any time in our sole discretion,
-                            to limit the availability and accessibility of the Xyla Inc., the Services and the Xyla or
-                            OpenEvidence Content to any person, geographic area or jurisdiction we so desire.</p>
-                        <p class="py-2">If you are a consumer who chooses to access the professional-level information made available
-                            through the Services, you should not rely on that information as professional medical advice
-                            or use the Services as a replacement for any relationship with your physician or other
-                            qualified healthcare professional. For medical concerns, including decisions about
-                            medications and other treatments, consumers should always consult their physician or, in
-                            serious cases, seek immediate assistance from emergency medical personnel.</p>
-                        <p class="py-2">Subject to your compliance with these Terms, you are granted a limited, non-exclusive,
-                            non-transferable and non-sublicensable license to use the Services and to view the
-                            information and materials made available through the Services, including User Content, as
-                            defined below, (&ldquo;Xyla or OpenEvidence Content&rdquo;) solely for your personal and
-                            professional use. You shall not use, copy, adapt, modify, prepare derivative works based
-                            upon, distribute, license, sell, transfer, publicly display, publicly perform, transmit,
-                            stream, broadcast or otherwise exploit the Services, Xyla Or OpenEvidence Content, or Xyla
-                            Inc. properties, except as expressly permitted in these Terms. All rights not expressly
-                            granted herein are reserved by us and our respective licensors, as applicable.</p>
-                        <p class="py-2">Xyla or OpenEvidence.com may contain links to third-party websites or resources which are not
-                            part of Xyla Inc.. You agree that we are not responsible or liable for these websites and
-                            resources including, without limitation, their availability or the content and information
-                            that they provide. The inclusion in Xyla Inc. of third party resources, including links to
-                            third party websites, does not imply our endorsement of these resources.</p>
-                        <p class="py-2">You agree that you will not engage in any of the following activities in connection with your
-                            use of the Services:</p>
-                        <ol class="list-disc">
-                            <li>
-                                Forge headers or otherwise manipulate identifiers in order to disguise the origin of any
-                                content transmitted through the Services;
-                            </li>
-                            <li>
-                                Use, display, mirror or frame a Xyla or OpenEvidence Site or OpenEvidence App, or any
-                                component thereof, or Xyla Inc. or OpenEvidence&rsquo;s trademark, logo or other
-                                proprietary information, without the written consent of Xyla Inc. or OpenEvidence, as
-                                applicable;
-                            </li>
-                            <li>
-                                Remove any copyright, trademark or other proprietary rights notices contained within the
-                                Xyla Inc., including those of Xyla Inc. or OpenEvidence and any of their respective
-                                licensors;
-                            </li>
-                            <li>
-                                Infringe or use any of our brands, logos trademarks or other proprietary marks in any
-                                business name, email, URL or other context unless expressly approved in writing by Xyla
-                                Inc. or OpenEvidence, as applicable;
-                            </li>
-                            <li>
-                                Attempt to circumvent any protective technological measure associated with the Services;
-                            </li>
-                            <li>
-                                Attempt to access or search any Xyla Inc. properties or any content contained therein
-                                through the use of any engine, software, tool, agent, device or mechanism (including
-                                scripts, bots, spiders, scraper, crawlers, data mining tools or the like) other than
-                                through software generally available through web browsers;
-                            </li>
-                            <li>
-                                Post, upload, transmit or otherwise distribute chain letters, pyramid schemes,
-                                advertising or spam;
-                            </li>
-                            <li>
-                                Impersonate or misrepresent your affiliation with another person or entity;
-                            </li>
-                            <li>
-                                Harvest or otherwise collect information about others, including email addresses;
-                            </li>
-                            <li>
-                                Interfere with or disrupt any of the Services or the associated computer or technical
-                                delivery systems;
-                            </li>
-                            <li>
-                                Interfere with, or attempt to interfere with, the access of any user, host or network,
-                                including, without limitation, sending a virus, overloading, flooding, spamming, or
-                                mail-bombing a Xyla Inc. or OpenEvidence Site or a OpenEvidence App;
-                            </li>
-                            <li>
-                                Fail to respect another user&rsquo;s privacy. This includes revealing another
-                                user&rsquo;s password, phone number, address, instant messenger I.D. or address or any
-                                other personally identifiable information; or
-                            </li>
-                            <li>
-                                Use any Xyla Inc. property, the Services or any OpenEvidence Content in any manner not
-                                permitted by these Terms.
-                            </li>
-                        </ol>
-                        <p class="py-2">We may (but are not obligated to) do any or all of the following without notice:</p>
-                        <ol>
-                            <li>
-                                Record or pre-screen User Content submissions to public areas within the Xyla Inc.;
-                            </li>
-                            <li>
-                                Investigate your use of the Services as we deem appropriate to comply with any
-                                applicable law, regulation, government request or legal process;
-                            </li>
-                            <li>
-                                Remove User Content which we believe does not comply with these Terms of Use;
-                            </li>
-                            <li>
-                                Terminate your access to the Xyla Inc. upon our determination that you have violated
-                                these Terms of Use; and
-                            </li>
-                            <li>
-                                We may collect, use, transfer, sell, and disclose non personal information and customer
-                                usage data for any purpose including commercial uses.
-                            </li>
-                            <li>
-                                Edit OpenEvidence Content.
-                            </li>
-                        </ol>
-                        <h2 class="text-2xl font-semibold mt-5">Information that you Make Available through the Services</h2>
-                        <p class="py-2">Certain Services enable users to submit content which may include, without limitation, text,
-                            images, photographs, figures, charts, graphics, reports, data and sound (&ldquo;User
-                            Content&rdquo;). User Content does not include Registration Information. When you submit
-                            User Content through the Services you automatically grant to us a perpetual, non-exclusive,
-                            worldwide, royalty-free, fully paid up, transferable, sub-licensable (through multiple
-                            tiers) license to distribute, transmit, copy, host, publicly display and perform, excerpt,
-                            index, tag, modify, adapt, sell, create derivative works from, and otherwise use and exploit
-                            such User Content in any media, form or format now known or hereafter developed, both within
-                            and outside of the Xyla Inc. for any purpose that is consistent with the OpenEvidence <a
-                                href="/policies/privacy">Privacy Policy</a>. You agree that you are solely responsible
-                            for all User Content that you submit through the Services. You represent and warrant that
-                            you either are the sole and exclusive owner of all User Content or you have all rights,
-                            licenses, consents and releases that are necessary to grant to us the rights in such User
-                            Content as specified in these Terms.</p>
-                        <p class="py-2">You are solely responsible for ensuring that the User Content that you make available through
-                            the Services complies with applicable laws including, without limitation, those relating to
-                            privacy, and also best clinical and ethical practices. Prior to submitting any User Content
-                            to the Services, you must remove any information that identifies an individual or could
-                            reasonably enable the identification of an individual, e.g., name, e-mail address, social
-                            security number, insurance number or other unique identification number, biometric
-                            identifiers, facial photographs, photographs of identifying marks such as tattoos or scars.
-                            You shall be solely responsible for any claims arising from your failure to de-identify User
-                            Content that you submit through the Services.</p>
-                        <p class="py-2">You agree that you will not use the Services to make available User Content that:</p>
-                        <ol>
-                            <li>
-                                you do not have the right to make available under any contractual or fiduciary agreement
-                                or law;
-                            </li>
-                            <li>
-                                infringes, misappropriates or violates a third party&rsquo;s patent, copyright,
-                                trademark, trade secret, moral rights or other intellectual property rights, or rights
-                                of publicity or privacy;
-                            </li>
-                            <li>
-                                results in the violation of any applicable law or regulation, including, but not limited
-                                to, the Health Insurance Portability and Accountability Act (HIPAA) or any other
-                                applicable privacy laws;
-                            </li>
-                            <li>
-                                is unlawful, harmful, obscene, defamatory, threatening, harassing, abusive, slanderous,
-                                offensive, or embarrassing to any other person or entity;
-                            </li>
-                            <li>
-                                promotes discrimination, bigotry, racism, hatred, harassment or harm against any
-                                individual or group;
-                            </li>
-                            <li>
-                                promotes illegal activity;
-                            </li>
-                            <li>
-                                is fraudulent, false, misleading or deceptive;
-                            </li>
-                            <li>
-                                constitutes an advertisement or solicitation of business; or
-                            </li>
-                            <li>
-                                contains viruses or other harmful computer code designed to interrupt, destroy or limit
-                                the use of any computer software or hardware.
-                            </li>
-                        </ol>
-                        <h2 class="text-2xl font-semibold mt-5">Proprietary Rights</h2>
-                        <p class="py-2">You acknowledge and agree that the Xyla Inc. and any software used in connection with the
-                            Xyla Inc. (&ldquo;Software&rdquo;) contain proprietary and confidential information that is
-                            protected by applicable intellectual property and other laws. You further acknowledge and
-                            agree that the OpenEvidence Content is protected by copyrights, trademarks, service marks,
-                            patents or other proprietary rights and laws. Except as expressly permitted by applicable
-                            law or as authorized by us or the applicable licensor, you agree not to modify, rent, lease,
-                            loan, sell, distribute, transmit, broadcast, publicly perform, create derivative works from,
-                            or &ldquo;scrape&rdquo; for commercial or any other purpose, the Xyla Inc., OpenEvidence
-                            Content or the Software, in whole or in part. Any use of Xyla Inc. or the OpenEvidence
-                            Services not expressly permitted by these Terms is a breach of these Terms and may violate
-                            our and third parties&rsquo; intellectual property rights.</p>
-                        <p class="py-2">You may view information provided through the Services online, download individual articles
-                            to your computer or mobile device for later reading or print a copy of an article for
-                            yourself. You may not remove any copyright notices from our materials. You agree not to
-                            access the Services by any means other than through the interface that is provided by us for
-                            use in accessing the Services.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Permitted And Prohibited Uses</h2>
-                        <p class="py-2">Except as expressly permitted in this Agreement, any copying, distributing, or modifying of
-                            the OpenEvidence Content is strictly prohibited. No part of the OpenEvidence Content may be
-                            copied for resale or other commercial use, or posted on public bulletin boards, websites,
-                            internet domains, online chatrooms, or hyperlinked, indexed, or otherwise utilized by
-                            automated software means, including search engines, robots, spiders, crawlers, data mining
-                            tools, or any other software that aggregates access to, or the content of, the OpenEvidence
-                            Content. No part of the OpenEvidence Content may be reverse engineered or included in other
-                            software. You may not upload or transmit to or through the OpenEvidence Content (i) any
-                            material that is unlawful, threatening, libelous, defamatory, obscene, pornographic,
-                            profane, or might in any other way violate any law, regulation, or rule, or (ii) any
-                            material that you do not have the right to transmit or that infringes the rights of any
-                            party. You may not upload or transmit to or through the Content any material which disrupts
-                            the normal operation of the OpenEvidence Content. You agree that you will provide only
-                            accurate and current information through the Content and will not impersonate anyone else in
-                            your use of the OpenEvidence Content. Xyla Inc. may electronically monitor compliance with
-                            this Agreement or otherwise audit your use of the Content for compliance with this Agreement
-                            and reserves the right in its sole discretion to disable or suspend your access to the
-                            OpenEvidence Content without notice in the event of suspicious or potentially threatening
-                            behavior. You agree to comply with all applicable laws, including all US export laws and
-                            regulations, in connection with your access to, and use of, the OpenEvidence Content.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Licensed Third Parties</h2>
-                        <p class="py-2">The following provisions apply to all OpenEvidence User Data made available via the Licensed
-                            Agreement from Xyla Inc. and OpenEvidence to Any Third Party hereafter known as &ldquo;the
-                            Licensee.&rdquo;</p>
-                        <p class="py-2">OpenEvidence is an AI experiment for personal use only, and the Terms do not under any
-                            circumstances confer an institutional license or a license to the clinical decision support
-                            use of OpenEvidence in an institutional clinical setting.</p>
-                        <p class="py-2">OpenEvidence also collects non-personal information and data though we do so in a form that
-                            does not permit any direct association with any specific individual. We may collect, use,
-                            transfer, sell and disclose non-personal information for any purpose. For instance, when you
-                            use our service we may collect data from the prompts you ask OpenEvidence and the
-                            interactions you have with our service. We collect such data so we can better understand our
-                            customers&rsquo; behavior and the use of our product but we may also sell this data to
-                            Licensed Third Parties. We may disclose, distribute, transfer and sell such data that we
-                            collect or in connection with customers&rsquo; use, provided we do not disclose personal
-                            information of our users to those same third parties.</p>
-                        <p class="py-2">Licensee shall have permission to have access to Xyla&rsquo;s Inc and OpenEvidence User Data
-                            under the Licensed Agreement. The purpose of this Agreement is to provide user information
-                            on customers who would potentially like to receive similar products as Ask OpenEvidence or
-                            related products and services.</p>
-                        <p class="py-2">Licensee shall not use or permit anyone to use the OpenEvidence User Data for any unlawful or
-                            unauthorized purpose. The OpenEvidence User Data are being provided for Licensee&rsquo;s
-                            business use only and Licensee is not authorized or permitted to distribute or otherwise
-                            furnish such information or software to any third-party without prior written approval of
-                            Xyla Inc and OpenEvidence.</p>
-                        <p class="py-2">Access to the OpenEvidence User Data is subject to termination in the event that any
-                            agreement between Xyla Inc and OpenEvidence and their users terminates for any reason.</p>
-                        <p class="py-2">The Licensee agrees and acknowledges that OpenEvidence User Data in the information contained
-                            therein is and shall remain valuable intellectual property owned by, or licensed to,
-                            respective owners, and that no proprietary rights are being transferred to the Licensee in
-                            such materials or in any of the information contained therein. The Licensee agrees that
-                            misappropriation or misuse of such materials will cause serious damage to OpenEvidence User
-                            third parties, and that in such event money damages may not constitute sufficient
-                            compensation to third parties; consequently, the Licensee agrees that in the event of any
-                            misappropriation or misuse, third parties, shall have the right to obtain injunctive relief
-                            in addition to any other legal or financial remedies.</p>
-                        <h2 class="text-2xl font-semibold mt-5">NO MEDICAL ADVICE</h2>
-                        <p class="py-2">OpenEvidence is not a health care provider, and OpenEvidence Content is not intended to
-                            provide medical advice, diagnosis or treatment or substitute for an individual patient
-                            assessment based on a qualified health care provider&rsquo;s evaluation of each patient,
-                            including factors unique to such patient. The OpenEvidence Content (i) is intended and
-                            presented only for general educational purposes and should not be relied upon or construed
-                            to indicate that the use of a pharmaceutical or treatment is safe, appropriate, or effective
-                            for a specific individual; (ii) is not comprehensive and does not cover all uses,
-                            precautions, side effects, warnings, and interactions related to pharmaceuticals or
-                            treatments; (iii) may not apply to any specific medical condition; (iv) is only applicable
-                            to use in the United States and pharmaceuticals legally available in the United States; (v)
-                            has not been reviewed for compliance with federal or state pharmaceutical marketing,
-                            advertising, and disclosure statutes or regulations; and (vi) is subject to change without
-                            notice. You may only use the OpenEvidence Content as prescribed to you by your Health Care
-                            Provider and in accordance with your Health Care Provider&rsquo;s instructions. Xyla Inc. is
-                            not responsible or liable for any advice, course of treatment, diagnosis, or any other
-                            information or services, including health care services, that you may obtain through your
-                            Health Care Provider. The OpenEvidence Content should not be used if you are in a
-                            life-threatening or emergency medical situation. IF YOU HAVE ANY QUESTIONS ABOUT YOUR
-                            HEALTH, INCLUDING ANY MEDICAL CONDITION OR TREATMENT, PLEASE CONTACT YOUR HEALTHCARE
-                            PROVIDER OR, IF YOU HAVE A MEDICAL EMERGENCY, SEEK IMMEDIATE MEDICAL HELP OR CALL EMERGENCY
-                            SERVICES AT 911 (OR YOUR LOCAL MEDICAL EMERGENCY NUMBER).</p>
-                        <h2 class="text-2xl font-semibold mt-5">Privacy Policy</h2>
-                        <p class="py-2">The Xyla Inc. <a href="/policies/privacy">Privacy Policy</a> provides information about our
-                            collection, use and disclosure of information about users of the Services. By accessing and
-                            using the Services, you agree to the terms of the Privacy Policy and acknowledge and agree
-                            that the Privacy Policy forms an integral part of these Terms.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Dealing with Third Parties</h2>
-                        <p class="py-2">Your correspondence or business dealings with, or participation in promotions of, advertisers
-                            or other third parties found on or through the Services, including requests for and delivery
-                            of goods or services, and any other terms, conditions, warranties or representations
-                            associated with such dealings, are solely between you and such third party. You agree that
-                            we shall not be responsible or liable for any loss or damage of any sort incurred as the
-                            result of any such dealings or as the result of the introduction of such third parties
-                            through the Services.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Laws that Govern this Agreement</h2>
-                        <p class="py-2">We control those components of the Services made available through our respective websites
-                            from our offices within the state of Massachusetts in the United States of America. By
-                            accessing the Services, you agree that the statutes and laws of the state of Massachusetts,
-                            without regard to choice of laws principles, will apply to all matters relating to use of
-                            the Services.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Termination and Modification</h2>
-                        <p class="py-2">You agree that we may, under certain circumstances and without prior notice, discontinue,
-                            temporarily or permanently, the Services (or any part thereof) or eliminate your account and
-                            remove any User Content that you have made available through the Services, with or without
-                            notice, for any of the following reasons (which are not intended to be exclusive): (a)
-                            breaches or violations of these Terms or other incorporated agreements or guidelines, (b)
-                            requests by law enforcement or other government agencies, (c) a request by you, (d)
-                            discontinuance or material modification to the Services (or any part thereof), (e) technical
-                            or security issues or problems, (f) extended periods of inactivity, and/or (g) your
-                            engagement in fraudulent or illegal activities. You agree that all terminations for cause
-                            shall be made at our sole discretion, and we shall not be liable to you or any third party
-                            for any termination of your account or access to the Services.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Disclaimer</h2>
-                        <p class="py-2 text-">XYLA INC PROVIDES THE OPENEVIDENCE CONTENT TO YOU ON AN &ldquo;AS-IS&rdquo; BASIS. NEITHER
-                            XYLA INC NOR ANY OF ITS LICENSORS OR SUPPLIERS, MAKES ANY WARRANTY OF ANY KIND, EXPRESS OR
-                            IMPLIED, AND EACH SPECIFICALLY DISCLAIMS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
-                            FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, QUALITY, CORRECTNESS, COMPLETENESS,
-                            COMPREHENSIVENESS, SUITABILITY, SYSTEM AVAILABILITY, AND COMPATIBILITY, SUBJECT TO THE LAWS
-                            OF ANY STATES THAT DO NOT ALLOW DISCLAIMERS OF IMPLIED WARRANTIES. YOU ACKNOWLEDGE THAT NO
-                            REPRESENTATIONS HAVE BEEN MADE RESPECTING THE OPENEVIDENCE CONTENT. YOU ACKNOWLEDGE THAT THE
-                            OPENEVIDENCE CONTENT AND ANY INFORMATION CONTAINED IN THE OPENEVIDENCE CONTENT OR ANY
-                            COMMUNICATIONS PROVIDED TO XYLA INC DURING USE OF THE OPENEVIDENCE CONTENT WILL BE
-                            TRANSMITTED OVER A MEDIUM THAT IS BEYOND THE CONTROL AND JURISDICTION OF XYLA INC AND ITS
-                            SUPPLIERS AND MAY BE SUBJECT TO LIMITATIONS, DELAYS, LATENCY ISSUES, AND OTHER PROBLEMS
-                            INHERENT IN THE USE OF THE INTERNET AND ELECTRONIC COMMUNICATIONS, AND XYLA INC IS NOT
-                            RESPONSIBLE FOR AND ASSUMES NO LIABILITY FOR ANY DELAYS, DELIVERY FAILURES, CORRUPTION OF
-                            ANY DATA OR OTHER DAMAGE RESULTING FROM SUCH PROBLEMS. XYLA INC IS NOT RESPONSIBLE FOR AND
-                            ASSUMES NO LIABILITY FOR ANY TECHNICAL MALFUNCTION, INABILITY TO ACCESS THE OPENEVIDENCE
-                            CONTENT OR OTHER PROBLEMS RELATED TO OR ARISING FROM ANY THIRD-PARTY HARDWARE OR SOFTWARE,
-                            INCLUDING ANY THIRD-PARTY WEBSITE, APPLICATION, OR OTHER PLATFORM.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Liability</h2>
-                        <p class="py-2">In no event will any of us or our respective directors, officers, employees, contractors,
-                            agents, sponsors, licensors or any other person or entity involved in creating, developing
-                            or delivering the Xyla Inc., the Services or the OpenEvidence Content be liable for any
-                            damages (including, without limitation, incidental and consequential damages, personal
-                            injury/wrongful death, lost profits, or damages resulting from lost data or business
-                            interruption) arising out of or in connection with these Terms or from the use of or
-                            inability to access or use the Xyla Inc., the Services or the OpenEvidence Content, or from
-                            any communications or interactions with other persons with whom you communicate or interact
-                            as a result of your use of the Services, whether based on warranty, contract, tort, or any
-                            other legal theory, and whether or not we, our licensors, ours suppliers, or any third
-                            parties mentioned with the Services are advised of the possibility of such damages. We, our
-                            licensors, our suppliers, or any third parties mentioned within the Services are not liable
-                            for any personal injury, including death, caused by your use or misuse of the Services or
-                            any information provided through the Services. Any claims arising in connection with your
-                            use of the Services must be brought within one (1) year of the date of the event giving rise
-                            to such action occurred. Remedies under these Terms are exclusive and are limited to those
-                            expressly provided for in these Terms. The limitations of damages set forth above are
-                            fundamental elements of the basis of the bargain between us and you.</p>
-                        <p class="py-2">NEITHER XYLA INC NOR ANY OF ITS AFFILIATES, DISTRIBUTORS, AGENTS, SUBCONTRACTORS, LICENSORS
-                            OR SUPPLIERS WILL HAVE ANY LIABILITY WHATSOEVER FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL,
-                            EXEMPLARY, PUNITIVE OR SPECIAL LOSS OR DAMAGE, INCLUDING WITHOUT LIMITATION DAMAGES FOR ANY
-                            BUSINESS INTERRUPTION, LOSS OF SALES, PROFITS, BUSINESS, GOODWILL, OR DATA, OR FOR THE
-                            INABILITY TO USE THE OPENEVIDENCE CONTENT, EVEN IF SUCH PARTIES HAVE BEEN ADVISED OF THE
-                            POSSIBILITY OF SUCH DAMAGES, FINES, COSTS, EXPENSES AND OTHER LIABILITIES, AND/OR THE SAME
-                            ARE REASONABLY FORESEEABLE. THE TOTAL LIABILITY OF XYLA INC AND ITS AFFILIATES,
-                            DISTRIBUTORS, AGENTS, SUBCONTRACTORS, LICENSORS, AND SUPPLIERS, ARISING OUT OF OR IN
-                            RELATION TO THIS AGREEMENT, THE OPENEVIDENCE CONTENT, AND ANY OTHER CAUSE WHATSOEVER, SHALL
-                            NOT EXCEED, IN THE AGGREGATE FOR ANY AND ALL CLAIMS UNDER OR IN RELATION TO THIS AGREEMENT,
-                            $100.</p>
-                        <p class="py-2">THE LIMITATIONS OF LIABILITY AND TYPES OF CLAIMS HEREBY LIMITED AND DISCLAIMED SHALL APPLY TO
-                            THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW AND ARE INTENDED BY THE PARTIES TO APPLY
-                            REGARDLESS OF THE FORM OF THE CLAIM OR ACTION (WHETHER BASED IN CONTRACT, NEGLIGENCE, STRICT
-                            LIABILITY OR OTHER TORT, STATUTE OR OTHERWISE), AND REGARDLESS OF WHETHER ANY LIMITED REMEDY
-                            PROVIDED FOR IN THIS AGREEMENT FAILS OF ITS ESSENTIAL PURPOSE. EACH PARTY ACKNOWLEDGES THAT
-                            THIS LIMITATION OF LIABILITY IS A MATERIAL PART OF THE CONSIDERATION PROVIDED BY THE OTHER
-                            PARTY IN EXCHANGE FOR THE RIGHTS GRANTED UNDER THIS AGREEMENT.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Indemnity</h2>
-                        <p class="py-2">You agree to defend, indemnify, and hold each of us and our respective officers, directors,
-                            employees, agents, licensors, and suppliers, harmless from and against any claims, actions
-                            or demands, liabilities and settlements including without limitation, reasonable legal and
-                            accounting fees, resulting from, or alleged to result from, your access to or use of Xyla
-                            Inc., OpenEvidence Services and the OpenEvidence Content or your violation of these Terms.
+                        <p class="py-2">Novik reserves the right to modify, at any time and without prior notice, the
+                            presentation and configuration of the Website, as well as the Content and Services
+                            incorporated therein. The User acknowledges and accepts that Novik may at any time
+                            interrupt, deactivate, and/or cancel any of these elements that are integrated into the
+                            Website or access to them.
                         </p>
-                        <h2 class="text-2xl font-semibold mt-5">Notice and Take Down Procedures and Copyright Agent</h2>
-                        <p class="py-2">If you believe in good faith any materials within the Xyla Inc. infringe your copyright, you
-                            may request removal of those materials (or access thereto) by contacting our copyright agent
-                            (identified below) and providing the following information:</p>
-                        <ol>
+                        <p class="py-2">Access to the Website by the User is free and, in general, does not require any
+                            consideration from the User, except for the cost of the connection through the
+                            telecommunications network provided by the access provider contracted by the User.</p>
+                        <p class="py-2">The use of some of the Content or Services of the Website may require prior
+                            subscription or registration by the User.</p>
+
+                        <strong class="py-3">The User</strong>
+                        <p class="py-2">Access, navigation, and use of the Website grant the condition of User, by which
+                            all the Terms established here, as well as any subsequent modifications, are accepted from
+                            the beginning of the navigation through the Website, without prejudice to the application of
+                            the corresponding mandatory legal regulations as applicable. Given the importance of the
+                            foregoing, the User is recommended to read these Terms each time they visit the Website.</p>
+                        <p class="py-2">The Novik Website provides a wide variety of information, services, and data.
+                            The User assumes responsibility for the proper use of the Website. This responsibility
+                            extends to:</p>
+                        <li>The use of the information, Content, and/or Services and data offered by Novik in accordance
+                            with these Terms, the Law, morality, or public order, or in any other way that may damage
+                            the rights of third parties or the functioning of the Website.</li>
+                        <li>The truthfulness and legality of the information provided by the User in the forms extended
+                            by Novik for access to certain Content or Services offered by the Website. In any case, the
+                            User will immediately notify Novik of any event that allows the improper use of the
+                            information registered in such forms, such as, but not limited to, theft, loss, or
+                            unauthorized access to identifiers and/or passwords, in order to proceed to their immediate
+                            cancellation.</li>
+                        <p class="py-2">Mere access to this Website does not imply the establishment of any commercial
+                            relationship between Novik and the User.</p>
+                        <p class="py-2">The User declares to be of legal age and to have the necessary legal capacity to
+                            be bound by these Terms. Therefore, this Novik Website is not directed at minors. Novik
+                            disclaims any responsibility for non-compliance with this requirement.</p>
+
+                        <strong class="py-5">III. ACCESS AND NAVIGATION ON THE WEBSITE: DISCLAIMER OF WARRANTIES AND
+                            LIABILITY</strong>
+                        <p class="py-2">Novik does not guarantee the continuity, availability, and utility of the
+                            Website, nor of the Content or Services. Novik will do its best to ensure the proper
+                            functioning of the Website; however, it is not responsible for nor guarantees that access to
+                            this Website will be uninterrupted or error-free.</p>
+                        <p class="py-2">Nor is it responsible for or guarantees that the content or software accessible
+                            through this Website is error-free or causes damage to the User’s computer system (software
+                            and hardware). Under no circumstances will Novik be responsible for any losses, damages, or
+                            harm of any kind that arise from accessing, browsing, and using the Website, including, but
+                            not limited to, those caused to computer systems or by the introduction of viruses.</p>
+                        <p class="py-2">Novik is not responsible for damages that may be caused to Users due to improper
+                            use of this Website. In particular, it is not responsible for any telecommunications
+                            failures, interruptions, or defects that may occur.</p>
+
+                        <strong class="py-5">IV. LINKING POLICY</strong>
+                        <p class="py-2">It is informed that the Novik Website may provide Users with links (such as, but
+                            not limited to, links, banners, buttons), directories, and search engines that allow Users
+                            to access websites owned and/or managed by third parties.</p>
+                        <p class="py-2">The installation of these links, directories, and search engines on the Website
+                            aims to facilitate Users' search and access to information available on the Internet and
+                            cannot be considered a suggestion, recommendation, or invitation to visit them.</p>
+                        <p class="py-2">Novik offers sponsored content, advertisements, and/or affiliate links. The
+                            information appearing in these affiliate links or the inserted advertisements is provided by
+                            the advertisers themselves, so Novik is not responsible for any inaccuracies or errors that
+                            such advertisements may contain, nor does it guarantee in any way the experience, integrity,
+                            or responsibility of the advertisers or the quality of their products and/or services.</p>
+                        <p class="py-2">Likewise, Novik will not guarantee the technical availability, accuracy,
+                            truthfulness, validity, or legality of third-party sites that can be accessed through the
+                            links.</p>
+                        <p class="py-2">Novik will not review or control the content of other websites in any way, nor
+                            does it approve, examine, or endorse the products and services, content, files, and any
+                            other material existing on such linked sites.</p>
+                        <p class="py-2">Novik assumes no responsibility for damages that may arise from accessing,
+                            using, or the quality or legality of the content, communications, opinions, products, and
+                            services available on third-party websites not managed by Novik that are linked to from this
+                            Website.</p>
+                        <p class="py-2">The User or third party creating a hyperlink from a different website to the
+                            Novik Website must be aware that:</p>
+                        <li>
+                            Total or partial reproduction of any of the Content and/or Services of the Website is
+                            not permitted without Novik's express authorization.
+                        </li>
+                        <li>
+                            False, inaccurate, or incorrect statements about the Novik Website, or the Content
+                            and/or Services of the Website are not permitted.
+                        </li>
+                        <li>
+                            Except for the hyperlink, the website where the link is established will not contain
+                            any element of this Website that is protected as intellectual property under Spanish
+                            law, unless expressly authorized by Novik.
+                        </li>
+                        <li>
+                            Establishing a hyperlink does not imply any relationship between Novik and the owner
+                            of the site where the link is created, nor does it imply Novik's knowledge or acceptance
+                            of the content, services, and/or activities offered on that site, and vice versa.
+                        </li>
+
+                        <strong class="py-5">V. INTELLECTUAL AND INDUSTRIAL PROPERTY</strong>
+                        <p class="py-2">Novik, either as the owner or assignee, holds all the intellectual and
+                            industrial property rights of the Website, as well as the elements contained therein
+                            (including but not limited to images, sound, audio, video, software, or texts,
+                            trademarks or logos, color combinations, structure and design, selection of materials
+                            used, computer programs necessary for its operation, access, and use, etc.). Therefore,
+                            these are works protected as intellectual property under Spanish law, and both Spanish
+                            and EU regulations in this field, as well as international treaties signed by Spain, are
+                            applicable to them.</p>
+                        <p class="py-2">All rights reserved. In accordance with the provisions of the Intellectual
+                            Property Law, the reproduction, distribution, and public communication, including its
+                            method of availability, of all or part of the content of this website, for commercial
+                            purposes, in any medium and by any technical means, is expressly prohibited without the
+                            authorization of Novik.</p>
+                        <p class="py-2">The User undertakes to respect Novik’s intellectual and industrial property
+                            rights. The User may view the elements of the Website and even print, copy, and store
+                            them on the hard drive of their computer or on any other physical medium, provided it is
+                            solely for personal use. However, the User may not delete, alter, or manipulate any
+                            protection devices or security systems that may be installed on the Website.</p>
+                        <p class="py-2">In the event that the User or a third party considers that any of the
+                            Content on the Website violates intellectual property protection rights, they must
+                            immediately notify Novik through the contact details provided in the GENERAL INFORMATION
+                            section of this Legal Notice and General Terms of Use.</p>
+
+                        <strong class="py-5">VI. LEGAL ACTIONS, APPLICABLE LAW, AND JURISDICTION</strong>
+                        <p class="py-2">Novik reserves the right to file civil or criminal actions it deems
+                            necessary for the improper use of the Website and its Content or for the breach of these
+                            Terms.</p>
+                        <p class="py-2">The relationship between the User and Novik will be governed by the current
+                            regulations and applicable law in the Spanish territory. In the event of any dispute
+                            regarding the interpretation and/or application of these Terms, the parties will submit
+                            their conflicts to the ordinary jurisdiction, subjecting themselves to the corresponding
+                            judges and courts in accordance with the law.</p>
+
+                        <strong class="py-5">VII. LIMITATION OF LIABILITY IN THE USE OF NOVIK AS AN
+                            ASSISTANT</strong>
+                        <p class="py-2">Novik is an AI-assisted tool designed to provide information and
+                            recommendations in the dental, stomatological, and medical fields. It is important to
+                            note that Novik does not perform clinical diagnoses or make final decisions on medical
+                            or dental treatments. The information provided by Novik is for guidance only and should
+                            not be used as a substitute for consultation, diagnosis, or treatment provided by a
+                            qualified healthcare professional.
+                            Therefore:
+                        </p>
+                        <li><strong class="py-3">User Responsibility: </strong>The user of Novik is responsible for
+                            interpreting the information provided and making decisions based on their own professional
+                            judgment or after consulting with a qualified healthcare professional. Novik assumes no
+                            responsibility for the actions or decisions the user makes based on the responses obtained
+                            through the platform.</li>
+                        <li><strong class="py-3">Professional Consultation: </strong>It is strongly recommended that any
+                            clinical action or treatment be validated by a properly licensed dentist, physician, or
+                            healthcare professional. Novik's responses are designed to assist but do not replace medical
+                            judgment nor should they be considered a definitive diagnosis or treatment plan.</li>
+                        <li><strong class="py-3">Disclaimer: </strong>Novik is not responsible for the consequences
+                            arising from the application of the recommendations or suggestions provided. Clinical
+                            decisions made by the user will always be at their own professional responsibility.</li>
+                        <p><strong class="py-3">Use Under Professional Supervision: </strong>Novik is designed to be
+                            used by healthcare professionals or under their supervision. Any other use or context is the
+                            sole responsibility of the user, and Novik will not be responsible for damages or harm
+                            resulting from such improper use.</p>
+
+                        <strong class="py-5">VIII. ADDITIONAL DISCLAIMER OF WARRANTIES AND LIABILITY</strong>
+                        <p class="py-2">The Novik team strives to ensure the accuracy of the information provided, but
+                            no express or implied warranty is offered regarding the reliability, accuracy, completeness,
+                            or timeliness of the information contained in the responses. Novik does not guarantee that
+                            the information is suitable for all clinical cases or that it is free from errors.</p>
+
+                        <strong class="py-5">IX. USER RESPONSIBILITY FOR UPLOADED CONTENT</strong>
+                        <p class="py-2">It is the user’s responsibility to ensure that any content they upload to the
+                            Novik platform is properly anonymized. This includes, but is not limited to, removing any
+                            personally identifiable information such as names, addresses, identification numbers, facial
+                            photographs, or any other data that could be associated with a specific person. Novik is not
+                            responsible for the user’s failure to comply with these obligations.</p>
+                        <p class="py-2">The user will be solely responsible for any claims that may arise as a result of
+                            failing to anonymize the data uploaded to the platform and releases Novik from any liability
+                            in this regard.</p>
+
+                        <strong class="py-5">X. USE OF UPLOADED DATA</strong>
+                        <p class="py-2">By uploading content to Novik, the user grants Novik a non-exclusive,
+                            irrevocable, worldwide, royalty-free, sublicensable license to use such content for internal
+                            purposes, such as statistical analysis, service development, and improvement. Under no
+                            circumstances will anonymized data be used for commercial purposes without the explicit
+                            consent of the user. Novik guarantees that it will not use sensitive or personally
+                            identifiable data without following the current legal regulations regarding personal data
+                            protection.</p>
+
+                        <strong class="py-5">XI. SPECIFIC PROHIBITIONS FOR USERS</strong>
+                        <p class="py-2">By using Novik's services, users agree not to engage in activities that may
+                            interfere with the platform’s proper functioning or violate the rights of third parties. The
+                            following activities are strictly prohibited:</p>
+                        <li><strong class="py-3">1. Uploading Unauthorized Content: </strong>Users may not upload
+                            content that infringes intellectual property rights, copyrights, or privacy rights of
+                            third parties to the platform.</li>
+                        <li><strong class="py-3">2. System Manipulation: </strong>It is prohibited to use bots,
+                            scraping, or any automated software or technology to access Novik’s services, collect data,
+                            or interfere with its functioning.</li>
+                        <li><strong>3. Distribution of Malicious Content:</strong>Users may not upload or distribute
+                            viruses, spam, malware, or any other harmful code or content that may compromise the
+                            security of Novik or its users.</li>
+                        <li><strong>4. Unauthorized Commercial Use:</strong>Users may not use Novik’s services for
+                            commercial purposes without the express authorization of the platform. This includes
+                            redistributing content or services and any unauthorized use for profit.</li>
+                        <li><strong>5. Impersonation: </strong>It is prohibited to impersonate another person or entity
+                            or falsely claim affiliation with any person or entity in connection with the use of Novik.
+                        </li>
+                        <li><strong>6. Unauthorized Data Collection: </strong>Users may not collect or attempt to
+                            collect data from other users without their consent, including personal or confidential
+                            information.</li>
+                        <p class="py-2">Violation of these prohibitions may result in the suspension or termination of
+                            the user’s account and, in severe cases, legal action may be taken.</p>
+
+
+                        <h1 class="text-2xl text-center font-semibold py-5">AVISO LEGAL Y CONDICIONES GENERALES DE USO
+                        </h1>
+                        <strong class="py-5">I. INFORMACIÓN GENERAL</strong>
+                        <p class="py-2">En cumplimiento con el deber de información dispuesto en la Ley 34/2002 de
+                            Servicios de la Sociedad de la Información y el Comercio Electrónico (LSSI-CE) de 11 de
+                            julio, se facilitan a continuación los siguientes datos de información general de este sitio
+                            web:</p>
+                        <p class="py-2">La titularidad de este sitio web, www.novik.ai, (en adelante, Sitio Web) la
+                            ostenta: BlueBioPlan SL, provista de NIF: B-72913379 e inscrita en: Registro Mercantil de
+                            Murcia con los siguientes datos registrales: Tomo 3615, Libro 0, FOLIO 218, Hoja MU-109359
+                            INSCRIP 1, cuyo representante es: VICENTE FERRER PÉREZ, y cuyos datos de contacto son:</p>
+                        <ol class="my-3" style="padding-left: 10px;">
                             <li>
-                                Identification of the copyrighted work that you believe to be infringed. Please describe
-                                the work, and where possible include a copy or the location (e.g., URL) of an authorized
-                                version of the work.
+                                Dirección: C/ La Cruz 2 Entlo Alcantarilla 30820 Murcia
                             </li>
                             <li>
-                                Identification of the material that you believe to be infringing and its location.
-                                Please describe the material, and provide us with its URL or any other pertinent
-                                information that will allow us to locate the material.
+                                Teléfono de contacto: 690957910
                             </li>
                             <li>
-                                Your name, address, telephone number and (if available) e-mail address.
-                            </li>
-                            <li>
-                                A statement that you have a good faith belief that the complained of use of the
-                                materials is not authorized by the copyright owner, its agent, or the law.
-                            </li>
-                            <li>
-                                A statement that the information that you have supplied is accurate, and indicating that
-                                &ldquo;under penalty of perjury,&rdquo; you are the copyright owner or are authorized to
-                                act on the copyright owner&rsquo;s behalf.
-                            </li>
-                            <li>
-                                A signature or the electronic equivalent from the copyright holder or authorized
-                                representative.
+                                Email de contacto:
                             </li>
                         </ol>
-                        <p class="py-2">Our agent for copyright issues relating to this web site is as follows:</p>
-                        <p class="py-2">Xyla Inc.<br />Attn: Designated Copyright Agent<br />245 Main Street<br />Cambridge,
-                            MA<br />02142<br />copyright@xyla.com</p>
-                        <p class="py-2">Any notification by a copyright owner or a person authorized to act on its behalf that fails
-                            to comply with requirements specified above shall not be considered sufficient notice and
-                            shall not be deemed to confer upon us actual knowledge of facts or circumstances from which
-                            infringing material or acts are evident. We may terminate the account of any user who we
-                            determine is a repeat infringer.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Modifications</h2>
-                        <p class="py-2">We reserve the right, at our sole discretion, to modify, discontinue or terminate any of the
-                            Services, the OpenEvidence Content or these Terms, at any time and without prior notice. If
-                            we modify these Terms in a material way, we will provide notice of such modification within
-                            the Xyla Inc.. By continuing to access or use the Services after we have modified these
-                            Terms, you agree to be bound by the modified Terms. If the modified Terms are not acceptable
-                            to you, you agree to immediately stop using Xyla Inc., OpenEvidence and the Services
-                            provided.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Complete Agreement</h2>
-                        <p class="py-2">Except as expressly provided in a particular &ldquo;legal notice&rdquo; on the website, these
-                            Terms (including the Xyla Inc. <a href="/policies/privacy">Privacy Policy</a>) constitute
-                            the entire agreement between you, Xyla Inc. and OpenEvidence with respect to your use (and
-                            prior use) of Xyla Inc. and the associated Services and OpenEvidence Content.</p>
-                        <p class="py-2">These Terms constitute the entire and exclusive understanding and agreement between Xyla
-                            Inc., OpenEvidence and you regarding Xyla Inc. Platform and the OpenEvidence Services and
-                            these Terms supersede and replace any and all prior oral or written understandings or
-                            agreements between Xyla, OpenEvidence and you regarding Xyla Inc. and the Services provided.
+
+                        <strong class="py-5">II. TÉRMINOS Y CONDICIONES GENERALES DE USO</strong>
+                        <strong class="py-3">El objeto de las condiciones: </strong>
+                        <p class="py-2">El Sitio WebEl objeto de las presentes Condiciones Generales de Uso (en
+                            adelante, Condiciones) es regular el acceso y la utilización del Sitio Web. A los efectos de
+                            las presentes Condiciones se entenderá como Sitio Web: la apariencia externa de los
+                            interfaces de pantalla, tanto de forma estática como de forma dinámica, es decir, el árbol
+                            de navegación; y todos los elementos integrados tanto en los interfaces de pantalla como en
+                            el árbol de navegación (en adelante, Contenidos) y todos aquellos servicios o recursos en
+                            línea que en su caso ofrezca a los Usuarios (en adelante, Servicios).Novik se reserva la
+                            facultad de modificar, en cualquier momento, y sin aviso previo, la presentación y
+                            configuración del Sitio Web y de los Contenidos y Servicios que en él pudieran estar
+                            incorporados. El Usuario reconoce y acepta que en cualquier momento Novik pueda interrumpir,
+                            desactivar y/o cancelar cualquiera de estos elementos que se integran en el Sitio Web o el
+                            acceso a los mismos.El acceso al Sitio Web por el Usuario tiene carácter libre y, por regla
+                            general, es gratuito sin que el Usuario tenga que proporcionar una contraprestación para
+                            poder disfrutar de ello, salvo en lo relativo al coste de conexión a través de la red de
+                            telecomunicaciones suministrada por el proveedor de acceso que hubiere contratado el
+                            Usuario.La utilización de alguno de los Contenidos o Servicios del Sitio Web podrá hacerse
+                            mediante la suscripción o registro previo del Usuario.
                         </p>
-                        <h2 class="text-2xl font-semibold mt-5">Assignment</h2>
-                        <p class="py-2">You may not assign or transfer these Terms, by operation of law or otherwise, without our
-                            prior written consent. Any attempt by you to assign or transfer these Terms, without such
-                            consent, will be null and of no effect. We may assign or transfer these Terms, at our sole
-                            discretion, without restriction. Subject to the foregoing, these Terms will bind and inure
-                            to the benefit of the parties, their successors and permitted assigns. Further, any of us
-                            may exercise the rights described in these Terms.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Notices</h2>
-                        <p class="py-2">Any notices or other communications permitted or required hereunder, including those
-                            regarding material modifications to these Terms, will be in a written form and given: (i) by
-                            us via email (in each case to the email address included in your Registration Information);
-                            or (ii) by posting within the Xyla Inc. Platform. For notices made by e-mail, the date of
-                            receipt will be deemed the date on which such notice is transmitted.</p>
-                        <h2 class="text-2xl font-semibold mt-5">No Waiver</h2>
-                        <p class="py-2">Our failure to enforce any right or provision of these Terms will not constitute a waiver of
-                            future enforcement of that right or provision. Except as expressly set forth in these Terms,
-                            the exercise by either party of any of its remedies under these Terms will be without
-                            prejudice to its other remedies under these Terms or otherwise.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Survival</h2>
-                        <p class="py-2">All provisions of these Terms shall survive termination of your Xyla Inc. account except for
-                            your license to access and use the Services and the Xyla Platform.</p>
-                        <h2 class="text-2xl font-semibold mt-5">Contact Us</h2>
-                        <p class="py-2">If you have questions about the Services or these Terms, or you wish to provide feedback,
-                            please contact us at <a href="mailto:contact@openevidence.com">contact@openevidence.com</a>.
-                            By submitting feedback and suggestions, you grant a non-exclusive, perpetual, irrevocable,
-                            and royalty-free license to any intellectual property rights you may have in your feedback
-                            and suggestions to us to use to improve the Services.</p>
+
+                        <strong class="py-3">El Usuario</strong>
+                        <p class="py-2">El acceso, la navegación y uso del Sitio Web, confiere la condición de Usuario,
+                            por lo que se aceptan, desde que se inicia la navegación por el Sitio Web, todas las
+                            Condiciones aquí establecidas, así como sus ulteriores modificaciones, sin perjuicio de la
+                            aplicación de la correspondiente normativa legal de obligado cumplimiento según el caso.
+                            Dada la relevancia de lo anterior, se recomienda al Usuario leerlas cada vez que visite el
+                            Sitio Web.El Sitio Web de Novik proporciona gran diversidad de información, servicios y
+                            datos. El Usuario asume su responsabilidad para realizar un uso correcto del Sitio Web. Esta
+                            responsabilidad se extenderá a:</p>
+                        <li>Un uso de la información, Contenidos y/o Servicios y datos ofrecidos por Novik sin que sea
+                            contrario a lo dispuesto por las presentes Condiciones, la Ley, la moral o el orden público,
+                            o que de cualquier otro modo puedan suponer lesión de los derechos de terceros o del mismo
+                            funcionamiento del Sitio Web.</li>
+                        <li>La veracidad y licitud de las informaciones aportadas por el Usuario en los formularios
+                            extendidos por Novik para el acceso a ciertos Contenidos o Servicios ofrecidos por el Sitio
+                            Web. En todo caso, el Usuario notificará de forma inmediata a Novik acerca de cualquier
+                            hecho que permita el uso indebido de la información registrada en dichos formularios, tales
+                            como, pero no solo, el robo, extravío, o el acceso no autorizado a identificadores y/o
+                            contraseñas, con el fin de proceder a su inmediata cancelación.</li>
+                        <p class="py-2">El mero acceso a este Sitio Web no supone entablar ningún tipo de relación de
+                            carácter comercial entre Novik y el Usuario.El Usuario declara ser mayor de edad y disponer
+                            de la capacidad jurídica suficiente para vincularse por las presentes Condiciones. </p>
+                        <p class="py-2">Por lo tanto, este Sitio Web de Novik no se dirige a menores de edad. Novik
+                            declina cualquier responsabilidad por el incumplimiento de este requisito.</p>
+
+                        <strong class="py-5">III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB: EXCLUSIÓN DE GARANTÍAS Y
+                            RESPONSABILIDAD</strong>
+                        <p class="py-2">Novik no garantiza la continuidad, disponibilidad y utilidad del Sitio Web, ni
+                            de los Contenidos o Servicios. Novik hará todo lo posible por el buen funcionamiento del
+                            Sitio Web, sin embargo, no se responsabiliza ni garantiza que el acceso a este Sitio Web no
+                            vaya a ser ininterrumpido o que esté libre de error.</p>
+                        <p class="py-2">Tampoco se responsabiliza o garantiza que el contenido o software al que pueda
+                            accederse a través de este Sitio Web, esté libre de error o cause un daño al sistema
+                            informático (software y hardware) del Usuario. En ningún caso Novik será responsable por las
+                            pérdidas, daños o perjuicios de cualquier tipo que surjan por el acceso, navegación y el uso
+                            del Sitio Web, incluyéndose, pero no limitándose, a los ocasionados a los sistemas
+                            informáticos o los provocados por la introducción de virus.</p>
+                        <p class="py-2">Novik tampoco se hace responsable de los daños que pudiesen ocasionarse a los
+                            usuarios por un uso inadecuado de este Sitio Web. En particular, no se hace responsable en
+                            modo alguno de las caídas, interrupciones, falta o defecto de las telecomunicaciones que
+                            pudieran ocurrir.</p>
+
+                        <strong class="py-5">IV. POLÍTICA DE ENLACES</strong>
+                        <p class="py-2">Se informa que el Sitio Web de Novik pone o puede poner a disposición de los
+                            Usuarios medios de enlace (como, entre otros, links, banners, botones), directorios y
+                            motores de búsqueda que permiten a los Usuarios acceder a sitios web pertenecientes y/o
+                            gestionados por terceros.</p>
+                        <p class="py-2">La instalación de estos enlaces, directorios y motores de búsqueda en el Sitio
+                            Web tiene por objeto facilitar a los Usuarios la búsqueda de y acceso a la información
+                            disponible en Internet, sin que pueda considerarse una sugerencia, recomendación o
+                            invitación para la visita de los mismos.Novik ofrece contenidos patrocinados, anuncios y/o
+                            enlaces de afiliados. La información que aparece en estos enlaces de afiliados o los
+                            anuncios insertados, son facilitados por los propios anunciantes, por lo que Novik no se
+                            hace responsable de posibles inexactitudes o errores que pudieran contener los anuncios, ni
+                            garantiza en modo alguno la experiencia, integridad o responsabilidad de los anunciantes o
+                            la calidad de sus productos y/o servicios.Asimismo, tampoco garantizará la disponibilidad
+                            técnica, exactitud, veracidad, validez o legalidad de sitios ajenos a su propiedad a los que
+                            se pueda acceder por medio de los enlaces.</p>
+                        <p class="py-2">Novik en ningún caso revisará o controlará el contenido de otros sitios web, así
+                            como tampoco aprueba, examina ni hace propios los productos y servicios, contenidos,
+                            archivos y cualquier otro material existente en los referidos sitios enlazados.</p>
+                        <p class="py-2">Novik no asume ninguna responsabilidad por los daños y perjuicios que pudieran
+                            producirse por el acceso, uso, calidad o licitud de los contenidos, comunicaciones,
+                            opiniones, productos y servicios de los sitios web no gestionados por Novik y que sean
+                            enlazados en este Sitio Web.</p>
+                        <p class="py-2">El Usuario o tercero que realice un hipervínculo desde una página web de otro,
+                            distinto, sitio web al Sitio Web de Novik deberá saber que:</p>
+                        <li>
+                            No se permite la reproducción —total o parcialmente— de ninguno de los Contenidos y/o
+                            Servicios del Sitio Web sin autorización expresa de Novik.
+                        </li>
+                        <li>
+                            No se permite tampoco ninguna manifestación falsa, inexacta o incorrecta sobre el Sitio Web
+                            de Novik, ni sobre los Contenidos y/o Servicios del mismo.
+                        </li>
+                        <li>
+                            A excepción del hipervínculo, el sitio web en el que se establezca dicho hiperenlace no
+                            contendrá ningún elemento, de este Sitio Web, protegido como propiedad intelectual por el
+                            ordenamiento jurídico español, salvo autorización expresa de Novik.
+                        </li>
+                        <li>
+                            El establecimiento del hipervínculo no implicará la existencia de relaciones entre Novik y
+                            el titular del sitio web desde el cual se realice, ni el conocimiento y aceptación de Novik
+                            de los contenidos, servicios y/o actividades ofrecidas en dicho sitio web, y viceversa.
+                        </li>
+
+                        <strong class="py-5">V. PROPIEDAD INTELECTUAL E INDUSTRIAL</strong>
+                        <p class="py-2">Novik por sí o como parte cesionaria, es titular de todos los derechos de
+                            propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos en el
+                            mismo (a título enunciativo y no exhaustivo, imágenes, sonido, audio, vídeo, software o
+                            textos, marcas o logotipos, combinaciones de colores, estructura y diseño, selección de
+                            materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso,
+                            etc.). Serán, por consiguiente, obras protegidas como propiedad intelectual por el
+                            ordenamiento jurídico español, siéndoles aplicables tanto la normativa española y
+                            comunitaria en este campo, como los tratados internacionales relativos a la materia y
+                            suscritos por España.</p>
+                        <p class="py-2">Todos los derechos reservados. En virtud de lo dispuesto en la Ley de Propiedad
+                            Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la
+                            comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte
+                            de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por
+                            cualquier medio técnico, sin la autorización de Novik.</p>
+                        <p class="py-2">El Usuario se compromete a respetar los derechos de propiedad intelectual e
+                            industrial de Novik. Podrá visualizar los elementos del Sitio Web o incluso imprimirlos,
+                            copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico
+                            siempre y cuando sea, exclusivamente, para su uso personal. El Usuario, sin embargo, no
+                            podrá suprimir, alterar, o manipular cualquier dispositivo de protección o sistema de
+                            seguridad que estuviera instalado en el Sitio Web.</p>
+                        <p class="py-2">En caso de que el Usuario o tercero considere que cualquiera de los Contenidos
+                            del Sitio Web suponga una violación de los derechos de protección de la propiedad
+                            intelectual, deberá comunicarlo inmediatamente a Novik a través de los datos de contacto del
+                            apartado de INFORMACIÓN GENERAL de este Aviso Legal y Condiciones Generales de Uso.</p>
+
+                        <strong class="py-5">VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN</strong>
+                        <p class="py-2">Novik se reserva la facultad de presentar las acciones civiles o penales que
+                            considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el
+                            incumplimiento de las presentes Condiciones.</p>
+                        <p class="py-2">La relación entre el Usuario y Novik se regirá por la normativa vigente y de
+                            aplicación en el territorio español. De surgir cualquier controversia en relación con la
+                            interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos
+                            a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme
+                            a derecho.</p>
+
+                        <strong class="py-5">VII. LIMITACIÓN DE RESPONSABILIDAD EN EL USO DE NOVIK COMO
+                            ASISTENTE</strong>
+                        <p class="py-2">Novik es una herramienta asistida por inteligencia artificial destinada a
+                            proporcionar información y recomendacionesen el ámbito odontológico, estomatológico y
+                            médico. Es importante señalar que Novik no realiza diagnósticos clínicos ni toma decisiones
+                            finales sobre tratamientos médicos o dentales. La información proporcionada por Novik tiene
+                            carácter orientativo y en ningún caso debe ser utilizada como sustituto de la consulta,
+                            diagnóstico o tratamiento proporcionado por un profesional de la salud cualificado. Por
+                            tanto:
+                        </p>
+                        <li><strong class="py-3">Responsabilidad del Usuario:</strong>El usuario de Novik es responsable
+                            de interpretar la información proporcionada y de tomar decisiones basadas en su propio
+                            juicio profesional o tras consultar con un profesional sanitario cualificado. Novik no asume
+                            ninguna responsabilidad sobre las acciones o decisiones que el usuario tome basándose en las
+                            respuestas obtenidas a través de la plataforma.</li>
+                        <li><strong class="py-3">Consulta profesional: </strong>Se recomienda encarecidamente que
+                            cualquier acción clínica o tratamiento sea validado por un odontólogo, médico o profesional
+                            sanitario debidamente titulado. Las respuestas de Novik están diseñadas para asistir, pero
+                            no reemplazan el criterio médico ni deben considerarse un diagnóstico definitivo ni un plan
+                            de tratamiento.</li>
+                        <li><strong class="py-3">Exclusión de responsabilidad: </strong>Novik no se hace responsable de
+                            las consecuencias derivadas de la aplicación de las recomendaciones o sugerencias
+                            proporcionadas. Las decisiones clínicas que adopte el usuario serán siempre bajo su propia
+                            responsabilidad profesional.</li>
+                        <p><strong class="py-3">Uso bajo supervisión profesional: </strong> Novik está diseñado para ser
+                            utilizado
+                            por profesionales de la salud o bajo su supervisión. El uso por parte de cualquier otra
+                            persona o en cualquier otro contexto será bajo la responsabilidad exclusiva del usuario
+                            y Novik no será responsable por daños o perjuicios resultantes de dicho uso inadecuado.
+                        </p>
+
+                        <strong class="py-5">VIII. EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD ADICIONAL</strong>
+                        <p class="py-2">El equipo de Novik se esfuerza por garantizar la exactitud de la información
+                            proporcionada, sin embargo, no se ofrece ninguna garantía expresa o implícita sobre la
+                            fiabilidad, exactitud, exhaustividad o actualización de la información contenida en las
+                            respuestas. Novik no garantiza que la información sea adecuada para todos los casos clínicos
+                            ni que esté libre de errores.</p>
+
+                        <strong class="py-5">IX. RESPONSABILIDAD DEL USUARIO SOBRE EL CONTENIDO SUBIDO</strong>
+                        <p class="py-2">Es responsabilidad del usuario garantizar que cualquier contenido que suba a la
+                            plataforma Novik esté debidamente anonimizado. Esto incluye, pero no se limita a, eliminar
+                            cualquier información identificativa personal como nombres, direcciones, números de
+                            identificación, fotografías faciales o cualquier otro dato que pueda asociarse con una
+                            persona específica. Novik no se hace responsable del incumplimiento de estas obligaciones
+                            por parte del usuario.</p>
+                        <p class="py-2">El usuario será el único responsable de cualquier reclamación que pueda surgir
+                            como resultado del incumplimiento de la anonimización de los datos subidos a la plataforma,
+                            y exonera a Novik de cualquier responsabilidad en este sentido.</p>
+
+                        <strong class="py-5">X. USO DE LOS DATOS SUBIDOS</strong>
+                        <p class="py-2">Al subir contenido a Novik, el usuario otorga a Novik una licencia no exclusiva,
+                            irrevocable, mundial, libre de regalías y sublicenciable para utilizar dicho contenido con
+                            fines internos, como análisis estadístico, desarrollo y mejora del servicio. En ningún caso
+                            se utilizarán datos anonimizados para fines comerciales sin el consentimiento explícito del
+                            usuario. Novik garantiza que no utilizará datos sensibles o personales identificables sin
+                            seguir las normativas legales vigentes en materia de protección de datos personales.</p>
+
+                        <strong class="py-5">XI. PROHIBICIONES ESPECÍFICAS DEL USUARIO</strong>
+                        <p class="py-2">Al utilizar los servicios de Novik, los usuarios se comprometen a no participar
+                            en actividades que puedan interferir con el buen funcionamiento de la plataforma o que
+                            violen los derechos de terceros. Las siguientes actividades están estrictamente prohibidas:
+                        </p>
+                        <li><strong class="py-3">1. Subir contenido no autorizado: </strong>El usuario no podrá subir a
+                            la plataforma contenido que infrinja derechos de propiedad intelectual, derechos de autor o
+                            derechos de privacidad de terceros.</li>
+                        <li><strong class="py-3">2. Manipulación del sistema: </strong>Está prohibido usar bots,
+                            scraping, o cualquier software o tecnología automatizada para acceder a los servicios de
+                            Novik, recolectar datos o interferir con su funcionamiento.</li>
+                        <li><strong class="py-3">3. Difusión de contenido malicioso: </strong>El usuario no podrá cargar
+                            ni distribuir virus, spam, malware o cualquier otro tipo de código dañino o contenido que
+                            pueda comprometer la seguridad de Novik o sus usuarios.</li>
+                        <li><strong class="py-3">4. Uso comercial no autorizado:</strong>El usuario no podrá utilizar
+                            los servicios de Novik con fines comerciales sin la autorización expresa de la plataforma.
+                            Esto incluye la redistribución de contenidos o servicios, así como cualquier uso con fines
+                            lucrativos que no haya sido autorizado.</li>
+                        <li><strong class="py-3">5. Suplantación de identidad: </strong>Queda prohibido suplantar a otra
+                            persona o entidad, o declarar falsamente la afiliación del usuario con cualquier persona o
+                            entidad en relación con el uso de Novik.
+                        </li>
+                        <li><strong class="py-3">6. Recopilación no autorizada de datos: </strong>El usuario no podrá
+                            recolectar o intentar recolectar datos de otros usuarios sin su consentimiento, incluyendo
+                            información personal o confidencial.</li>
+                        <p class="py-2">El incumplimiento de estas prohibiciones podrá resultar en la suspensión o
+                            terminación de la cuenta del usuario y, en casos graves, en la adopción de medidas legales
+                            correspondientes.</p>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-
-    contact 
-
-    <!-- footer -->
-    <footer class="px-8 md:px-28 bg-black/5 mt-20 py-8">
-        <div class="grid grid-cols-12 content-center md:space-x-10 gap-y-8">
-            <div class="col-span-12 md:col-span-3">
-                <img src="./public/logo.svg" class="h-10" alt="logo">
-            </div>
-            <div class="col-span-12 md:col-span-5 flex justify-between">
-                <div class=" flex flex-col gap-y-1">
-                    <h5 class="font-semibold">Product</h5>
-                    <a href="#" class="text-sm text-gray">Ask OpenEvidence</a>
-                    <a href="#" class="text-sm text-gray">Feed</a>
-                </div>
-                <div class=" flex flex-col gap-y-1">
-                    <h5 class="font-semibold">Company</h5>
-                    <a href="#" class="text-sm text-gray">About</a>
-                    <a href="#" class="text-sm text-gray">Announcements</a>
-                </div>
-                <div class=" flex flex-col gap-y-1">
-                    <h5 class="font-semibold">Contact Us</h5>
-                    <a href="mailto:sponsors@novik.ai" class="text-sm text-gray">Email</a>
-                    <a href="tel:+34690957910" class="text-sm text-gray">Phone</a>
-                    <a href="https://wa.me/34690957910" class="text-sm text-gray">Whatsapp</a>
-
-                </div>
-            </div>
-            <div class="col-span-12 md:col-span-4">
-                <div>
-                    <h5>Don′t miss our weekly email alert.</h5>
-                    <p class="text-sm text-gray">Stay up to date on all the new findings that matter.</p>
-                </div>
-                <div class="flex gap-x-2 my-2">
-                    <input type="text" id="first_name"
-                        class=" w-3/4 bg-gray-10 border border-gray-100 text-gray-900  ring-0 text-sm bg-transparent focus:outline-none rounded-lg focus:ring-0  block p-2.5"
-                        placeholder="Email" required />
-
-                    <button type="submit"
-                        class="w-3/12 text-gray border bg-transparent hover:bg-slate-50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center">Submit</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-12 mt-5 space-x-2md:space-x-10">
-            <div class="col-span-12 md:col-span-3">
-                <p class="text-gray text-sm">© 2021 OpenEvidence. All rights reserved.</p>
-                <p class="text-gray text-xs py-3 text-right flex ">
-                    <a href="./terms.html">Terms of Service </a> | &nbsp;
-                    <a href="./privacy.html">Privacy Policy </a> | &nbsp;
-                    <a href="./advertising.html">Advertising Policy</a>
-                </p>
-            </div>
-            <div class="col-span-12 md:col-span-9">
-                <p class="text-sm text-gray">
-                    OpenEvidence is an experimental technology demonstrator. OpenEvidence does not provide medical
-                    advice, diagnosis or treatment. User questions and other inputs on OpenEvidence are not covered
-                    by HIPAA. It is the responsibility of the user to ensure questions do not contain protected
-                    health information (PHI) or any information that violates the privacy of any person.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-    <source src="./js/script.js" type="">
-</body>
-
-</html>
+@endsection

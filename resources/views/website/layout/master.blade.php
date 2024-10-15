@@ -68,7 +68,7 @@
                 <p class="text-gray text-xs py-3 text-right flex">
                     <a href="{{ route('terms') }}">Terms of Service </a> | &nbsp;
                     <a href="{{ route('privacy') }}">Privacy Policy </a> | &nbsp;
-                    <a href="{{ route('cookies') }}">Cookies</a>
+                    <a href="{{ route('advertising') }}">Advertising</a>
                 </p>
             </div>
             <div class="col-span-12 md:col-span-9">
