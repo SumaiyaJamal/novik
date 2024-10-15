@@ -269,6 +269,24 @@
     </button>
 
     <script src="{{ asset('assets/website/js/script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if(session('message') && session('type'))
+    <script>
+        $(document).ready(function () {
+            const message = "{{ session('message') }}";
+            const type = "{{ session('type') }}";
+
+            Swal.fire({
+                title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
+                text: message,
+                icon: type,
+                confirmButtonText: 'Okay'
+            });
+        });
+    </script>
+    @endif
 </body>
 
 </html>

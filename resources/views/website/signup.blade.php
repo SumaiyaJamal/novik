@@ -22,33 +22,66 @@
         </div>
         <h2 class="text-black/80 mb-6 text-center">Complete your registration </h2>
 
-        <form>
+        <form action="{{ route('register') }}" method="POST">
+            @csrf
             <div class="mb-4">
-                <label for="email" class="block text-sm font-medium text-gray-700">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name"
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name"  placeholder="Enter your name"
                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
+                    @error('name')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
+                <input type="text" id="email" name="email"  placeholder="Enter your name"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
+                @error('email')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
+
+            <div class="mb-4 flex space-x-4">
+                <div class="w-1/2">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
+                    @error('password')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="w-1/2">
+                    <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Re-enter Password</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Enter your password"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
+                    @error('password_confirmation')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
+                </div>
+            </div>
+
             <div class="mb-4 flex space-x-4">
                 <div class="w-1/2">
                     <label for="country" class="block text-sm font-medium text-gray-700">Country of origin</label>
-                    <input type="text" id="country" name="country" required placeholder="Enter your country"
+                    <input type="text" id="country" name="country"  placeholder="Enter your country"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
-                </div>
+                        @error('country')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
+                    </div>
                 <div class="w-1/2">
                     <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-                    <input type="date" id="dob" name="dob" required
+                    <input type="date" id="dob" name="dob"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
-                </div>
+                        @error('dob')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
+                    </div>
             </div>
 
             <div class=" mb-4">
                 <label for="occupation" class="block mb-2 text-sm font-medium text-black/80">Occupation</label>
-                <select id="occupation"
+                <select id="occupation" name = "occupation"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
                     <option value="">Select a profession</option>
                     <option value="General Dentist">General Dentist</option>
@@ -67,6 +100,9 @@
                     <option value="Laboratory Technician">Laboratory Technician</option>
                     <option value="Other">Other</option>
                 </select>
+                @error('occupation')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
             </div>
 
             <!-- <div class="mb-3 bg-slate-100 px-4 py-5 rounded-md mt-10 shadow-sm">
@@ -92,7 +128,7 @@
                     </div>
                     <div class="flex-1">
                         <label for="number" class="block mb-2 text-sm font-medium text-black/80">Number</label>
-                        <input type="text" id="number" name="number" required placeholder="Enter your number"
+                        <input type="text" id="number" name="number"  placeholder="Enter your number"
                             class=" focus:ring-primary focus:border-primary block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none">
                     </div>
                 </div>
@@ -118,22 +154,44 @@
             </div> -->
 
             <div class="flex items-center mt-5 py-5">
-                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4  text-primary border-gray-300 rounded focus:ring-primary focus:ring-0">
-                <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I have read and agree to the  <a href="./terms.html" class="text-blue-600 dark:text-blue-500 hover:underline">Terms of Service and Privacy Policy. *</a>.</label>
-            </div>
-
-
-
-
+                <input id="link-checkbox" type="checkbox" value="" name="policy"
+                    class="w-4 h-4  text-primary border-gray-300 rounded focus:ring-primary focus:ring-0">
+                <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I have
+                    read and agree to the <a href="./terms.html"
+                        class="text-blue-600 dark:text-blue-500 hover:underline">Terms of Service and Privacy
+                        Policy. *</a>.</label>
+                    </div>
+                    @error('policy')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             <button type="submit"
                 class="w-full !bg-primary/90 text-white py-2 rounded-md hover:bg-primary focus:outline-none focus:ring-0 focus:ring-opacity-50">
-                Continue</button>
+                Submit</button>
         </form>
 
         <p class="mt-4 text-start text-sm text-gray mt-7 px-3">
-            Are you a patient or caregiver? <a href="./login.html" class="text-blue-600 hover:underline"> Click here.</a>
+            Are you a patient or caregiver? <a href="./login.html" class="text-blue-600 hover:underline"> Click
+                here.</a>
         </p>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if(session('message') && session('type'))
+    <script>
+        $(document).ready(function () {
+            const message = "{{ session('message') }}";
+            const type = "{{ session('type') }}";
+
+            Swal.fire({
+                title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
+                text: message,
+                icon: type,
+                confirmButtonText: 'Okay'
+            });
+        });
+    </script>
+    @endif
 </body>
 
 </html>

@@ -15,8 +15,8 @@
     <!-- Navbar start from here -->
     @include('website.layout.navbar')
     @yield('content')
-       <!-- footer -->
-       <footer class="px-8 md:px-28 bg-black/5 mt-20 py-8">
+    <!-- footer -->
+    <footer class="px-8 md:px-28 bg-black/5 mt-20 py-8">
         <div class="grid grid-cols-12 content-center md:space-x-10 gap-y-8">
             <div class="col-span-12 md:col-span-3">
                 <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10" alt="logo" />
@@ -92,6 +92,24 @@
     </button>
     @stack('js')
     <script src="{{ asset('assets/website/js/script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if(session('message') && session('type'))
+    <script>
+        $(document).ready(function () {
+            const message = "{{ session('message') }}";
+            const type = "{{ session('type') }}";
+
+            Swal.fire({
+                title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
+                text: message,
+                icon: type,
+                confirmButtonText: 'Okay'
+            });
+        });
+    </script>
+    @endif
 </body>
 
 </html>
