@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feed</title>
+    <link rel="stylesheet" href="./css/global.css" <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+</head>
+
+<body class="relative">
+    <!-- navbar  -->
+    <nav class="bg-gray-800 p-2.5 px-4 md:px-16 shadow sticky top-0 z-[99999] bg-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Left Side: Logo -->
+            <div class="text-white text-lg font-bold">
+                <a href="./index.html"><img src="./public/logo.avif" class="h-10" alt="logo"></a>
+            </div>
+
+            <!-- Right Side: Links and Buttons -->
+            <div id="desktopNav" class="md:flex space-x-4 items-center text-black text-sm">
+                <ul class="flex space-x-4">
+                    <li><a href="./index.html" aria-label="Ask">Home</a></li>
+                    <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
+                    <li><a href="./contact.html" aria-label="About">Contact</a></li>
+                    <li><a href="./sponsers.html" aria-label="Announcements">Sponsers</a></li>
+                    <li><a href="./signup.html" aria-label="Announcements">Register</a></li>
+                </ul>
+                <div class="flex gap-x-2 ml-5">
+                    <a href="./login.html" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
+                        aria-label="Sign Up">Login</a>
+                </div>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <button id="navbar-toggle" class="md:hidden text-black focus:outline-none">
+                <svg id="navbar-icon" class="w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="navbar" class="hidden md:hidden h-100 flex flex-col space-y-2 mt-2">
+            <div class="flex gap-x-2 md:ms-5 w-full my-4 ">
+                <a href="login.html"
+                    class="w-1/2 text-center hover:bg-slate-100 border bg-slate-50 px-4 py-1.5 rounded">Login</a>
+                <a href="./signup.html"
+                    class="w-1/2 text-center hover:bg-hover bg-primary text-white px-4 py-1.5 rounded">Sign
+                    Up</a>
+            </div>
+            <a href="./index.html">Home</a>
+            <!-- <a href="feed.html">Feed</a> -->
+            <a href="./contact.html">Contact</a>
+            <a href="./Announcements.html">Sponsers</a>
+        </div>
+    </nav>
+
+
+
+    <section class=" flex justify-center mt-10">
+        <div class="container w-full md:w-3/5 rounded-2xl bg-white min-h-screen shadow-sm">
+            <div>
+                <div class=" border-gray-200 sm:text-sm">
+                    <nav class="flex gap-x-1  pt-4" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                        <button type="button" class="tab-button active w-max flex items-center justify-center" id="tab1"
+                            data-tab="tabs-with-icons-1" aria-selected="true">
+                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTab-iconWrapper mui-style-vubbuv mr-2"
+                                focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="StarIcon"
+                                width="24" height="24">
+                                <path
+                                    d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                            Featured
+                        </button>
+                        <button type="button" class="tab-button flex items-center justify-center" id="tab2"
+                            data-tab="tabs-with-icons-2" aria-selected="false">
+                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTab-iconWrapper mui-style-vubbuv mr-2"
+                                focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="TrendingIcon"
+                                width="24" height="24">
+                                <path d="M3 3h18v2H3zM3 10h12v2H3zM3 17h18v2H3z" />
+                            </svg>
+                            Trending
+                        </button>
+                        <button type="button" class="tab-button flex items-center justify-center" id="tab3"
+                            data-tab="tabs-with-icons-3" aria-selected="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 3h10v2H7v-2zm0 3h10v2H7v-2z" />
+                            </svg>
+
+                            New Evidence
+                        </button>
+                    </nav>
+                </div>
+
+
+                <div class="mt-3">
+                    <!-- Featured tab -->
+                    <div id="tabs-with-icons-1" role="tabpanel" aria-labelledby="tab1">
+                        <div class="container px-8 w-full">
+                            <div class="featured">
+                                <h3 class="text-4xl font-semibold mt-5 py-3">Featured</h3>
+                                <h5 class="text-xl pb-3">Featured by the OpenEvidence team.</h5>
+                            </div>
+                            <!-- query question-1 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-2 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-3 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-4 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-5 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end mt-6 mb-10">
+                                <a href="#" class="bg-primary text-white px-3 py-1.5 rounded">See More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Treanding tab -->
+                    <div id="tabs-with-icons-2" class="hidden" role="tabpanel" aria-labelledby="tab2">
+                        <div class="container px-8 w-full  ">
+                            <div class="featured">
+                                <h3 class="text-4xl font-semibold mt-5 py-3">Trending Topics</h3>
+                                <h5 class="text-xl pb-3">The most asked about topics on OpenEvidence.</h5>
+                            </div>
+
+                            <!-- options -->
+                            <form class="w-[90%] mx-auto">
+                                <label for="specialty-select"
+                                    class="block mb-2 text-sm font-medium text-black/80">Specialty</label>
+                                <select id="specialty-select"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
+                                    <option selected value="All Specialties">All Specialties</option>
+                                    <option value="Allergy and Immunology">Allergy and Immunology</option>
+                                    <option value="Anesthesiology">Anesthesiology</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Dermatology">Dermatology</option>
+                                    <option value="Endocrinology">Endocrinology</option>
+                                    <option value="Gastroenterology">Gastroenterology</option>
+                                    <option value="Hematology">Hematology</option>
+                                    <option value="Infectious Diseases">Infectious Diseases</option>
+                                    <option value="Nephrology" selected>Nephrology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Obstetrics & Gynecology (OB/GYN)">Obstetrics & Gynecology (OB/GYN)
+                                    </option>
+                                    <option value="Oncology">Oncology</option>
+                                    <option value="Ophthalmology">Ophthalmology</option>
+                                    <option value="Otolaryngology (ENT)">Otolaryngology (ENT)</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Psychiatry">Psychiatry</option>
+                                    <option value="Pulmonology">Pulmonology</option>
+                                    <option value="Radiology">Radiology</option>
+                                    <option value="Rheumatology">Rheumatology</option>
+                                    <option value="Urology">Urology</option>
+                                </select>
+                            </form>
+
+                            <!-- query question-1 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-2 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-3 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end mt-6 mb-10">
+                                <a href="#" class="bg-primary text-white px-3 py-1.5 rounded">See More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Evidence -->
+                    <div id="tabs-with-icons-3" class="hidden" role="tabpanel" aria-labelledby="tab3">
+                        <div class="container px-8 w-full  ">
+                            <div class="featured">
+                                <h3 class="text-4xl font-semibold mt-5 py-3">New Evidence</h3>
+                                <h5 class="text-xl pb-3">The latest landmark evidence to keep you ahead of the curve.
+                                </h5>
+                            </div>
+                            <!-- options -->
+                            <form class="w-[90%] mx-auto">
+                                <label for="specialty-select"
+                                    class="block mb-2 text-sm font-medium text-black/80">Specialty</label>
+                                <select id="specialty-select"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
+                                    <option selected value="All">All Specialties</option>
+                                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Endocrinology">Endocrinology</option>
+                                    <option value="Gastroenterology">Gastroenterology</option>
+                                    <option value="Hepatology">Hepatology</option>
+                                    <option value="Infectious Diseases">Infectious Diseases</option>
+                                    <option value="Longevity & Wellness">Longevity & Wellness</option>
+                                    <option value="Nephrology">Nephrology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Oncology">Oncology</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Rheumatology">Rheumatology</option>
+                                </select>
+                            </form>
+
+
+
+                            <!-- query question-1 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-2 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+                            <!-- query question-3 -->
+                            <div class="mt-5 border-b py-4 border-gray/20">
+                                <h3 class="text-lg mb-5">What are health risks associated with GLP-1 receptor agonists
+                                    like Ozempic and
+                                    Mounjaro?</h3>
+                                <div class="flex gap-x-4 relative">
+                                    <p class="text-base text-gray">
+                                        Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) such as semaglutide
+                                        (Ozempic) and
+                                        tirzepatide
+                                        (Mounjaro) are associated with several health risks. The most common adverse
+                                        events are
+                                        gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and
+                                        abdominal pain. There
+                                        is
+                                        also a risk of pancreatitis and biliary disease. Hypersensi...
+
+                                    </p>
+                                    <a class="absolute -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-white ps-6 shadow-yellow-50 shadow-2xl"
+                                        href="">Read More</a>
+
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end mt-6 mb-10">
+                                <a href="#" class="bg-primary text-white px-3 py-1.5 rounded">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- top to bottom button -->
+    <button id="scrollToTopBtn" class="scrollToTopBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#808080"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenEvidence - Questions</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list li {
+            padding: 10px;
+            border-bottom: 1px solid #cccccc56;
+            border-top: 1px solid #cccccc56;
+        }
+
+        .list li:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .list li:hover {
+            background-color: #f9f9f9;
+        }
+
+        .date {
+            width: 20%;
+        }
+
+        .questions {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="bg-gray-800 p-2.5 px-4 md:px-16 shadow sticky top-0 z-[99999] bg-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Left Side: Logo -->
+            <div class="text-white text-lg font-bold">
+                <a href="./index.html"><img src="./public/logo.avif" class="h-10" alt="logo"></a>
+            </div>
+
+            <!-- Right Side: Links and Buttons -->
+            <div id="desktopNav" class="md:flex space-x-4 items-center text-black text-sm">
+                <ul class="flex space-x-4">
+                    <li><a href="./index.html" aria-label="Ask">Home</a></li>
+                    <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
+                    <li><a href="./contact.html" aria-label="About">Contact</a></li>
+                    <li><a href="./sponsers.html" aria-label="Announcements">Sponsers</a></li>
+                    <li><a href="./signup.html" aria-label="Announcements">Register</a></li>
+                </ul>
+                <div class="flex gap-x-2 ml-5">
+                    <a href="./login.html" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
+                        aria-label="Sign Up">Login</a>
+                </div>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <button id="navbar-toggle" class="md:hidden text-black focus:outline-none">
+                <svg id="navbar-icon" class="w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="navbar" class="hidden md:hidden h-100 flex flex-col space-y-2 mt-2">
+            <div class="flex gap-x-2 md:ms-5 w-full my-4 ">
+                <a href="login.html"
+                    class="w-1/2 text-center hover:bg-slate-100 border bg-slate-50 px-4 py-1.5 rounded">Login</a>
+                <a href="./signup.html"
+                    class="w-1/2 text-center hover:bg-hover bg-primary text-white px-4 py-1.5 rounded">Sign
+                    Up</a>
+            </div>
+            <a href="./index.html">Home</a>
+            <!-- <a href="feed.html">Feed</a> -->
+            <a href="./contact.html">Contact</a>
+            <a href="./Announcements.html">Sponsers</a>
+        </div>
+    </nav>
+
+    <section class="px-2 md:px-32">
+        <div id="users" class="border-b pb-20 border-gray/25">
+
+            <div class="flex justify-between mt-20 ">
+                <div class="text-xl md:text-2xl font-semibold text-black/80">My Questions</div>
+                <div>
+                    <!-- <input class="search" placeholder="Search" /> -->
+                    <div class="relative flex items-center justify-center">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="search bg-gray/5 block w-full px-1 md:px-5 rounded-2xl py-1.5 md:py-2.5 ps-8 md:ps-10 text-sm text-gray-900 border border-gray/20 outline-none bg-gray-50 focus:ring-none"
+                            placeholder="Search Questions" required />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex justify-around w-full py-6 mt-3 font-semibold">
+                <span class=" w-1/4">Date</span>
+                <p class="w-3/4">Question</p>
+            </div>
+            <ul class="list">
+                <li class="flex justify-around w-full">
+                    <span class="date w-1/4">22-10-2024</span>
+                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Eveniet, optio?</a></p>
+                </li>
+                <li class="flex justify-around w-full">
+                    <span class="date w-1/4">22-10-2024</span>
+                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Eveniet, optio?</a></p>
+                </li>
+                <li class="flex justify-around w-full">
+                    <span class="date w-1/4">22-10-2024</span>
+                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Eveniet, optio?</a></p>
+                </li>
+                <li class="flex justify-around w-full">
+                    <span class="date w-1/4">22-10-2024</span>
+                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Eveniet, optio?</a></p>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <script>
+        var options = {
+            valueNames: ['date', 'questions']
+        };
+
+        var userList = new List('users', options);
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
