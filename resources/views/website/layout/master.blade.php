@@ -65,9 +65,9 @@
                     © 2021 OpenEvidence. All rights reserved.
                 </p>
                 <p class="text-gray text-xs py-3 text-right flex">
-                    <a href="./terms.html">Terms of Service </a> | &nbsp;
-                    <a href="./privacy.html">Privacy Policy </a> | &nbsp;
-                    <a href="./advertising.html">Advertising Policy</a>
+                    <a href="{{ route('terms') }}">Terms of Service </a> | &nbsp;
+                    <a href="{{ route('privacy') }}">Privacy Policy </a> | &nbsp;
+                    <a href="{{ route('cookies') }}">Cookies</a>
                 </p>
             </div>
             <div class="col-span-12 md:col-span-9">
@@ -90,8 +90,8 @@
             <polyline points="18 15 12 9 6 15" />
         </svg>
     </button>
-
-    <script src="./js/script.js"></script>
+    @stack('js')
+    <script src="{{ asset('assets/website/js/script.js') }}"></script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Artisan;
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,15 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-
-Auth::routes();
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/sponsers', [HomeController::class, 'sponsers'])->name('sponsers');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/signup', [HomeController::class, 'signup'])->name('signup');
+Route::get('/query', [HomeController::class, 'query'])->name('query');
+Route::get('/signup', [RegistrationController::class, 'signup'])->name('signup');
+Route::get('/login', [RegistrationController::class, 'login'])->name('login');
+Route::get('/term-and-condition', [HomeController::class, 'terms'])->name('terms');
+Route::get('/privacy-policy', [HomeController::class, 'privacy'])->name('privacy');
+Route::get('/cookies', [HomeController::class, 'cookies'])->name('cookies');
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashbaord');
 Route::get('/clear-all', function () {
     Artisan::call('cache:clear');  // Clears the application cache

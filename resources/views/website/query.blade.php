@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenEvidence-details</title>
-    <link rel="stylesheet" href="./css/global.css" <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{ asset('assets/website/css/global.css') }}" <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <style>
@@ -17,55 +17,7 @@
 
 <body class="relatives">
     <!-- navbar  -->
-    <nav class="bg-gray-800 p-2.5 px-4 md:px-16 shadow sticky top-0 z-[99999] bg-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Left Side: Logo -->
-            <div class="text-white text-lg font-bold">
-                <a href="./index.html"><img src="./public/logo.svg" class="h-10" alt="logo"></a>
-            </div>
-
-            <!-- Right Side: Links and Buttons -->
-            <div id="desktopNav" class="md:flex space-x-4 items-center text-black text-sm">
-                <ul class="flex space-x-4">
-                    <li><a href="./index.html" aria-label="Ask">Home</a></li>
-                    <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
-                    <li><a href="./contact.html" aria-label="About">Contact</a></li>
-                    <li><a href="./sponsers.html" aria-label="Announcements">Sponsers</a></li>
-                    <li><a href="./signup.html" aria-label="Announcements">Register</a></li>
-                </ul>
-                <div class="flex gap-x-2 ml-5">
-                    <a href="./login.html" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
-                        aria-label="Sign Up">Login</a>
-                </div>
-            </div>
-
-            <!-- Hamburger Icon -->
-            <button id="navbar-toggle" class="md:hidden text-black focus:outline-none">
-                <svg id="navbar-icon" class="w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="navbar" class="hidden md:hidden h-100 flex flex-col space-y-2 mt-2">
-            <div class="flex gap-x-2 md:ms-5 w-full my-4 ">
-                <a href="login.html"
-                    class="w-1/2 text-center hover:bg-slate-100 border bg-slate-50 px-4 py-1.5 rounded">Login</a>
-                <a href="./signup.html"
-                    class="w-1/2 text-center hover:bg-hover bg-primary text-white px-4 py-1.5 rounded">Sign
-                    Up</a>
-            </div>
-            <a href="./index.html">Home</a>
-            <!-- <a href="feed.html">Feed</a> -->
-            <a href="./contact.html">Contact</a>
-            <a href="./Announcements.html">Sponsers</a>
-        </div>
-    </nav>
-
-
-
+    @include('website.layout.navbar')
     <section class=" flex justify-center my-5 mb-40 px-2">
         <div class="container w-full md:w-3/5 rounded-2xl bg min-h-screen ">
             <form class="relative z-50 px-1 md:px-10 rounded-lg flex w-full md:w-full py-5" method="POST"
@@ -412,7 +364,7 @@
 
 
 
-    <script src="./js/script.js"></script>
+    <script src="{{ asset('assets/website/js/script.js') }}"></script>
 </body>
 
 </html>

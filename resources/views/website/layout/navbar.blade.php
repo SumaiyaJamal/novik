@@ -5,7 +5,6 @@
             <a href="./index.html"><img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10"
                     alt="logo" /></a>
         </div>
-
         <!-- Right Side: Links and Buttons -->
         <div id="desktopNav" class="md:flex space-x-4 items-center text-black text-sm">
             <ul class="flex space-x-4">
@@ -20,7 +19,7 @@
                 </li>
             </ul>
             <div class="flex gap-x-2 ml-5">
-                <a href="./login.html" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
+                <a href="{{ route('login') }}" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
                     aria-label="Sign Up">Login</a>
             </div>
         </div>

@@ -14,7 +14,7 @@
 <body class="relative">
 
     <!-- Hero Section -->
-    <section class="h-screen header-container">
+    <section class="h-screen header-container" style="background-image: url('{{ asset('assets/website/background/bg.jpeg') }}');">
         <header class="bg-gray-800 z-50">
             <nav class="px-8 py-3 w-full navbar-home mx-auto flex justify-between items-center bg-transparent">
                 <!-- Logo Container -->
@@ -37,7 +37,7 @@
                         <li><a href="{{ route('signup') }}" aria-label="Announcements">Register</a></li>
                     </ul>
                     <div class="flex gap-x-2 ml-5">
-                        <a href="./login.html" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
+                        <a href="{{ route('login') }}" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
                             aria-label="Sign Up">Login</a>
                     </div>
                     <div class="relative" id="user-poper">
@@ -205,7 +205,7 @@
         <div class="container px-8 w-full md:w-3/5 ">
             <!-- query question-1 -->
             <div class="mt-5 border-b py-4 border-gray/20">
-                <a href="./details.html">
+                <a href="{{ route('query') }}">
                     <h3 class="text-lg mb-5 text-primary font-semibold ">What are health risks associated with GLP-1
                         receptor agonists like Ozempic and
                         Mounjaro?</h3>
@@ -221,13 +221,13 @@
 
                     </p>
                     <a class="absolute text-primary -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-background ps-6 shadow-yellow-50 shadow-2xl"
-                        href="./details.html">Read More</a>
+                        href="{{ route('query') }}">Read More</a>
 
                 </div>
             </div>
             <!-- query question-1 -->
             <div class="mt-5 border-b py-4 border-gray/20">
-                <a href="./details.html">
+                <a href="{{ route('query') }}">
                     <h3 class="text-lg mb-5 text-primary font-semibold ">What are health risks associated with GLP-1
                         receptor agonists like Ozempic and
                         Mounjaro?</h3>
@@ -243,13 +243,13 @@
 
                     </p>
                     <a class="absolute text-primary -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-background ps-6 shadow-yellow-50 shadow-2xl"
-                        href="./details.html">Read More</a>
+                        href="{{ route('query') }}">Read More</a>
 
                 </div>
             </div>
             <!-- query question-1 -->
             <div class="mt-5 border-b py-4 border-gray/20">
-                <a href="./details.html">
+                <a href="{{ route('query') }}">
                     <h3 class="text-lg mb-5 text-primary font-semibold ">What are health risks associated with GLP-1
                         receptor agonists like Ozempic and
                         Mounjaro?</h3>
@@ -265,7 +265,7 @@
 
                     </p>
                     <a class="absolute text-primary -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-background ps-6 shadow-yellow-50 shadow-2xl"
-                        href="./details.html">Read More</a>
+                        href="{{ route('query') }}">Read More</a>
 
                 </div>
             </div>

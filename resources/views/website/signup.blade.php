@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="{{ asset('assets/website/css/global.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Signup Page</title>
@@ -14,11 +14,11 @@
 </head>
 
 <body class="flex items-center justify-center min-h-screen bg-gray-100 ">
-    
-    
+
+
     <div class="bg-white my-10 p-8 rounded-xl shadow-xl w-full max-w-xl flex flex-col justify-center">
         <div class=" flex justify-center py-5">
-            <img src="./public/logo.svg" height="40" width="200" alt="">
+            <img src="{{ asset('assets/website/background/logo.svg') }}" height="40" width="200" alt="">
         </div>
         <h2 class="text-black/80 mb-6 text-center">Complete your registration </h2>
 
@@ -44,8 +44,8 @@
                     <input type="date" id="dob" name="dob" required
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
                 </div>
-            </div>           
-            
+            </div>
+
             <div class=" mb-4">
                 <label for="occupation" class="block mb-2 text-sm font-medium text-black/80">Occupation</label>
                 <select id="occupation"

@@ -14,12 +14,12 @@
 </head>
 
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
-    
+
 
 
     <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-sm flex flex-col justify-center">
         <div class=" flex justify-center py-5">
-            <img src="./public/logo.svg" class="h-12 object-contain" alt="">
+            <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-12 object-contain" alt="">
         </div>
         <h2 class="text-sm mb-6 text-center">Please log in or register to continue.</h2>
 
@@ -36,7 +36,7 @@
         </form>
 
         <p class="mt-4 text-center">
-            Don't have an account? <a href="./signup.html" class="text-blue-600 hover:underline">Sign up</a>
+            Don't have an account? <a href="{{ route('signup') }}" class="text-blue-600 hover:underline">Sign up</a>
         </p>
 
         <div class="flex items-center my-4">

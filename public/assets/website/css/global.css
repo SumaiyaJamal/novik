@@ -1731,7 +1731,6 @@ ol{
 .header-container {
   position: relative;
   /* Needed to position the pseudo-element */
-  background-image: url(../public/background/bg.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
