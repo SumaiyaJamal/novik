@@ -14,28 +14,26 @@
 </head>
 
 <body class="flex items-center justify-center min-h-screen bg-gray-100 ">
-
-
     <div class="bg-white my-10 p-8 rounded-xl shadow-xl w-full max-w-xl flex flex-col justify-center">
         <div class=" flex justify-center py-5">
             <img src="{{ asset('assets/website/background/logo.svg') }}" height="40" width="200" alt="">
         </div>
         <h2 class="text-black/80 mb-6 text-center">Complete your registration </h2>
 
-        <form action="{{ route('register') }}" method="POST">
+        <form id="signupForm" action="{{ route('register') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                <input type="text" id="name" name="name"  placeholder="Enter your name"
+                <input type="text" id="name" name="name" placeholder="Enter your name"
                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
-                    @error('name')
-                        <span class="text-red-500">{{ $message }}</span>
-                    @enderror
+                @error('name')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="text" id="email" name="email"  placeholder="Enter your name"
-                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
+                <input type="text" id="email" name="email" placeholder="Enter your name"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
                 @error('email')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
@@ -51,8 +49,10 @@
                     @enderror
                 </div>
                 <div class="w-1/2">
-                    <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Re-enter Password</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Enter your password"
+                    <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Re-enter
+                        Password</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation"
+                        placeholder="Enter your password"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
                     @error('password_confirmation')
                         <span class="text-red-500">{{ $message }}</span>
@@ -63,20 +63,20 @@
             <div class="mb-4 flex space-x-4">
                 <div class="w-1/2">
                     <label for="country" class="block text-sm font-medium text-gray-700">Country of origin</label>
-                    <input type="text" id="country" name="country"  placeholder="Enter your country"
+                    <input type="text" id="country" name="country" placeholder="Enter your country"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
-                        @error('country')
+                    @error('country')
                         <span class="text-red-500">{{ $message }}</span>
                     @enderror
-                    </div>
+                </div>
                 <div class="w-1/2">
                     <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-                    <input type="date" id="dob" name="dob"
+                    <input type="date" id="dob" name="dob"  max="{{ date('Y-m-d') }}"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
-                        @error('dob')
+                    @error('dob')
                         <span class="text-red-500">{{ $message }}</span>
                     @enderror
-                    </div>
+                </div>
             </div>
 
             <div class=" mb-4">
@@ -101,97 +101,134 @@
                     <option value="Other">Other</option>
                 </select>
                 @error('occupation')
-                        <span class="text-red-500">{{ $message }}</span>
-                    @enderror
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
-
-            <!-- <div class="mb-3 bg-slate-100 px-4 py-5 rounded-md mt-10 shadow-sm">
-                <h5 class="text-lg font-semibold text-black/80">Verify your health care professional credentials</h5>
-                <p class="text-sm py-2">
-                    Unlimited question-asking on OpenEvidence is free for verified health care professionals (HCPs). To
-                    verify you are an HCP, please enter your number (or international equivalent) below.
-                </p>
-
-                <div class="flex gap-x-4 mt-5">
-                    <div class="flex-1">
-                        <label for="occupation" class="block mb-2 text-sm font-medium text-black/80">Identifier</label>
-                        <select id="occupation"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
-                            <option value="npi" selected>NPI (United States)</option>
-                            <option value="gmcNumber">GMC Number (United Kingdom)</option>
-                            <option value="minc">MINC (Canada)</option>
-                            <option value="ahpra">AHPRA (Australia)</option>
-                            <option value="crmNumber">CRM Number (Brazil)</option>
-                            <option value="mohLicenseNumber">MOH License Number (Israel)</option>
-                            <option value="fileUpload">Other (Upload Documents)</option>
-                        </select>
-                    </div>
-                    <div class="flex-1">
-                        <label for="number" class="block mb-2 text-sm font-medium text-black/80">Number</label>
-                        <input type="text" id="number" name="number"  placeholder="Enter your number"
-                            class=" focus:ring-primary focus:border-primary block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none">
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="my-5 mt-5">
-                <label for="occupation" class="block mb-2 text-sm font-medium text-black/80">
-                    How did you hear about us?
-                </label>
-                <select id="occupation"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
-                    <option value="Google / Search Engine">Google / Search Engine</option>
-                    <option value="From a Physician Friend / Colleague">From a Physician Friend / Colleague</option>
-                    <option value="From a Non-Physician Friend / Colleague">From a Non-Physician Friend / Colleague
-                    </option>
-                    <option value="Conference">Conference</option>
-                    <option value="Email">Email</option>
-                    <option value="Twitter">Twitter</option>
-                    <option value="Reddit">Reddit</option>
-                    <option value="App Store / Play Store">App Store / Play Store</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div> -->
-
-            <div class="flex items-center mt-5 py-5">
+            <div class="flex items-center mt-5 py-5 policy">
                 <input id="link-checkbox" type="checkbox" value="" name="policy"
                     class="w-4 h-4  text-primary border-gray-300 rounded focus:ring-primary focus:ring-0">
                 <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I have
                     read and agree to the <a href="./terms.html"
                         class="text-blue-600 dark:text-blue-500 hover:underline">Terms of Service and Privacy
                         Policy. *</a>.</label>
-                    </div>
-                    @error('policy')
-                    <span class="text-red-500">{{ $message }}</span>
-                @enderror
+            </div>
+            @error('policy')
+                <span class="text-red-500">{{ $message }}</span>
+            @enderror
             <button type="submit"
                 class="w-full !bg-primary/90 text-white py-2 rounded-md hover:bg-primary focus:outline-none focus:ring-0 focus:ring-opacity-50">
                 Submit</button>
         </form>
 
-        <p class="mt-4 text-start text-sm text-gray mt-7 px-3">
+        {{-- <p class="mt-4 text-start text-sm text-gray mt-7 px-3">
             Are you a patient or caregiver? <a href="./login.html" class="text-blue-600 hover:underline"> Click
                 here.</a>
-        </p>
+        </p> --}}
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    @if(session('message') && session('type'))
-    <script>
-        $(document).ready(function () {
-            const message = "{{ session('message') }}";
-            const type = "{{ session('type') }}";
+    @if (session('message') && session('type'))
+        <script>
+            $(document).ready(function() {
+                const message = "{{ session('message') }}";
+                const type = "{{ session('type') }}";
 
-            Swal.fire({
-                title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
-                text: message,
-                icon: type,
-                confirmButtonText: 'Okay'
+                Swal.fire({
+                    title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
+                    text: message,
+                    icon: type,
+                    confirmButtonText: 'Okay'
+                });
+            });
+        </script>
+    @endif
+    <script>
+        $(document).ready(function() {
+            $("#signupForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    password_confirmation: {
+                        required: true,
+                        equalTo: "#password"
+                    },
+                    country: {
+                        required: true,
+                        minlength: 2
+                    },
+                    dob: {
+                        required: true,
+                        date: true
+                    },
+                    occupation: {
+                        required: true
+                    },
+                    policy: {
+                        required: true
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Please enter your name.",
+                        minlength: "Your name must be at least 2 characters long."
+                    },
+                    email: {
+                        required: "Please enter your email address.",
+                        email: "Please enter a valid email address."
+                    },
+                    password: {
+                        required: "Please provide a password.",
+                        minlength: "Your password must be at least 6 characters long."
+                    },
+                    password_confirmation: {
+                        required: "Please confirm your password.",
+                        equalTo: "Passwords do not match."
+                    },
+                    country: {
+                        required: "Please enter your country.",
+                        minlength: "Your country must be at least 2 characters long."
+                    },
+                    dob: {
+                        required: "Please enter your date of birth.",
+                        date: "Please enter a valid date."
+                    },
+                    occupation: {
+                        required: "Please select your occupation."
+                    },
+                    policy: {
+                        required: "You must agree to the terms and conditions."
+                    }
+                },
+                errorPlacement: function(error, element) {
+                    // Customize where the error messages will be displayed
+                    error.addClass('text-red-500'); // Add class for styling
+
+                    // Custom placement for the policy checkbox
+                    if (element.attr("name") === "policy") {
+                        error.insertAfter(".policy"); // Place after the policy class div
+                    } else {
+                        error.insertAfter(element); // Default placement for other fields
+                    }
+                },
+                submitHandler: function(form) {
+                    form.submit(); // Submit the form if valid
+                }
             });
         });
     </script>
-    @endif
+
 </body>
 
 </html>
