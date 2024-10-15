@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   background-color: #f8f8f8;
+   font-weight: 400;
+   font-style: normal;
+   font-family: "Gruppo", ui-sans-serif, system-ui, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+}
+
+ol{
+   list-style: decimal;
+}
+
+.header-container {
+   position: relative; /* Needed to position the pseudo-element */
+   background-image: url(../public/background/bg.jpeg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   overflow: hidden; /* Prevent any overflow */
+   z-index: 1;
+   background-blend-mode: overlay;
+}
+
+.header-container::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(255, 255, 255, 0.548); /* Optional: Color overlay */
+   backdrop-filter: blur(3px); /* Adjust blur amount */
+   z-index: -1; /* Ensure it's above the background but below content */
+}
+
+.scrollToTopBtn {
+   position: fixed;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: none;
+   background-color: #ffffff;
+   color: white;
+   border: none;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.199);
+   border-radius: 5px;
+   padding: 4px;
+   cursor: pointer;
+   z-index: 1000;
+   border-radius: 50%;
+   border: 1px solid #d1d1d1;
+}
+
+.scrollToTopBtn:hover {
+   background-color: #efeff0;
+}
+
+/* Basic styling for tabs */
+.hidden {
+   display: none;
+}
+.tab-button {
+   padding: 10px;
+   width: 33%;
+   background-color: #1b0d08;
+   text-align: center;
+   border: none;
+   background: none;
+   cursor: pointer;
+   position: relative;
+   transition: all 0.1s ease;
+   color: rgba(41, 40, 40, 0.952);
+}
+
+.tab-button.active {
+   font-weight: bold;
+   color: rgba(0, 0, 0, 0.945);
+}
+
+.tab-button.active::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: -2px;
+   height: 2px;
+   background: #e4643d;
+}
+
+/* Base styles */
+select {
+   transition: border-color 0.3s ease, outline 0.3s ease;
+}
+
+select:focus {
+   border-color: #e4643d; /* Primary color on focus */
+   outline: 1px solid #e4643d; /* Optional outline */
+   /* outline-offset: 2px; Space between the outline and the element */
+}
+
+/* Keep the default border color when focus is lost */
+select:not(:focus) {
+   border-color: #d1d5db; /* Ensure the border color remains the same */
+}
+
+.fixed-nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000; /* Make sure it stays above other content */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   background-color: rgb(250, 250, 250);
+   width: 100%;
+   transition: all 0.3s ease;
+}
+
+.hidden {
+   visibility: hidden;
+}
+
+.visible {
+   display: block; /* Or use flex if you prefer */
+}
+
+@media (max-width: 768px) {
+   #desktopNav {
+      display: none;
+   }
+}
+
+
+
+/* //.accordion-content */
+.accordion-header {
+   cursor: pointer;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   margin: 0;
+}
+
+.accordion-content {
+   display: none;
+   padding: 10px;
+   border-top: none;
+   background: #fafafa;
+}
+
+.icon {
+   width: 25px;
+   height: 25px;
+   transition: all 0.4s ease;
+   transform: rotate(-180deg);
+   fill: #e4643d;
+}
+
+.active .icon {
+   transform: rotate(-180deg);
+}
