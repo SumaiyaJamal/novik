@@ -36,12 +36,16 @@
                         <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
                         <li><a href="{{ route('contact') }}" aria-label="contact.html">Contact</a></li>
                         <li><a href="{{ route('sponsers') }}" aria-label="Announcements">Sponsers</a></li>
+                        @guest
                         <li><a href="{{ route('signup') }}" aria-label="Announcements">Register</a></li>
+                        @endguest
                     </ul>
+                    @guest
                     <div class="flex gap-x-2 ml-5">
                         <a href="{{ route('login') }}" class="hover:bg-hover bg-primary text-white px-4 py-2 rounded"
                             aria-label="Sign Up">Login</a>
                     </div>
+                    @endguest
                     @auth
                         @include('website.layout.profile')
                     @endauth

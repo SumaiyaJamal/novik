@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="{{ asset('assets/website/css/global.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Login Page</title>
@@ -14,22 +14,34 @@
 </head>
 
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
-
-
-
     <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-sm flex flex-col justify-center">
         <div class=" flex justify-center py-5">
             <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-12 object-contain" alt="">
         </div>
         <h2 class="text-sm mb-6 text-center">Please log in or register to continue.</h2>
 
-        <form>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <input type="email" id="email" name="email" required placeholder="Enter your email"
                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
+                @error('email')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
 
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
+                @error('password')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
+            </div>
+            @error('crediancials')
+            <span class="text-red-500">{{ $message }}</span>
+        @enderror
             <button type="submit"
                 class="w-full !bg-primary/90 text-white py-2 rounded-md hover:bg-primary focus:outline-none focus:ring-0 focus:ring-opacity-50">
                 Login</button>

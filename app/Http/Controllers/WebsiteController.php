@@ -27,6 +27,10 @@ class WebsiteController extends Controller
     {
         return view('website.privacy');
     }
+    public function myQuestions()
+    {
+        return view('website.questions');
+    }
     public function cookies()
     {
         return view('website.cookies');

@@ -14,9 +14,11 @@ Route::get('/query', [WebsiteController::class, 'queroutes/web.phry'])->name('qu
 Route::get('/term-and-condition', [WebsiteController::class, 'terms'])->name('terms');
 Route::get('/privacy-policy', [WebsiteController::class, 'privacy'])->name('privacy');
 Route::get('/cookies', [WebsiteController::class, 'cookies'])->name('cookies');
+Route::get('/my-questions', [WebsiteController::class, 'myQuestions'])->name('myquestions');
 Route::get('/registration', [RegistrationController::class, 'signup'])->name('signup');
 Route::post('/registration', [RegistrationController::class, 'registerSubmit'])->name('register');
 Route::get('/login', [RegistrationController::class, 'login'])->name('login');
+Route::post('/login', [RegistrationController::class, 'loginSubmit'])->name('login');
 // Clear cache route (no authentication needed)
 Route::get('/clear-all', function () {
     Artisan::call('cache:clear');
