@@ -1458,6 +1458,9 @@ video {
 .fill-white {
   fill: #fff;
 }
+.fill-orange {
+  fill: #e4643d;
+}
 
 .object-contain {
   -o-object-fit: contain;

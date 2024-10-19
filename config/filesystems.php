@@ -55,6 +55,12 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
+        'public_audio' => [
+        'driver' => 'local',
+        'root' => public_path('website'), // Files will be stored in the /public/audio directory
+        'url' => env('APP_URL') . '/website', // Access URL for files
+        'visibility' => 'public', // Ensure it's publicly accessible
+    ],
 
     ],
 
