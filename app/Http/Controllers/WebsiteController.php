@@ -33,7 +33,7 @@ class WebsiteController extends Controller
     {
         $questions = Question::where('user_id', auth()->user()->id)->get(); // This line will return the questions and stop execution
         return view('website.questions', compact('questions')); // This line will never be reached
-    }   
+    }
     public function advertising()
     {
         return view('website.cookies');
@@ -105,18 +105,18 @@ class WebsiteController extends Controller
     //                     $pmid = $article['pmid']; // Assuming 'pmid' is available in your article array
     //                     $detailUrl = "https://pubmed.ncbi.nlm.nih.gov/{$pmid}/"; // No need for ?format=pubmed
     //                     $detailResponse = Http::get($detailUrl);
-                    
+
     //                     if ($detailResponse->successful()) {
     //                         // Load the HTML response into DOMDocument
     //                         $dom = new DOMDocument();
     //                         @$dom->loadHTML($detailResponse->body()); // Use '@' to suppress warnings from invalid HTML
-                    
+
     //                         // Create a new DOMXPath object to query the DOM
     //                         $xpath = new \DOMXPath($dom); // Use global namespace
-                    
+
     //                         // Find the div with the class 'abstract-content'
     //                         $abstractDivs = $xpath->query("//div[contains(@class, 'abstract-content')]");
-                    
+
     //                         if ($abstractDivs->length > 0) {
     //                             // Get the content of the first abstract div
     //                             $article['abstract'] = trim($abstractDivs->item(0)->textContent);
@@ -127,11 +127,11 @@ class WebsiteController extends Controller
     //                         $article['abstract'] = 'Error fetching abstract';
     //                     }
     //                 }
-                    
+
     //             }
     //             // Now you can return or use the formatted results
     //             return view('website.query', compact('articles','question'));
-            
+
     //         }else {
     //             // Handle error
     //             return redirect()->back()->with(['type'=>'error', 'message'=> 'Something wents wrong!']);
@@ -144,7 +144,7 @@ class WebsiteController extends Controller
         if ($request->login == 'login_first') {
             return response()->json(['message' => 'Please log in first', 'status' => 'login_required'], 403);
         }
-        try{        
+        try{
         $url = 'https://api.openai.com/v1/chat/completions';
         $bearerToken = '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'; // Replace with your actual token
 
@@ -155,7 +155,7 @@ class WebsiteController extends Controller
                 ['role' => 'system', 'content' => 'You are an expert medical assistant.'],
                 ['role' => 'user', 'content' => $request->input('query')],
             ],
-            'max_tokens' => 100,
+            'max_tokens' => 2,
         ];
 
         // Make the HTTP POST request to OpenAI API
@@ -187,9 +187,9 @@ class WebsiteController extends Controller
             if ($pubmedResponse->successful()) {
                 $data = $pubmedResponse->json();
                 if (isset($data['resultList']['result'])) {
-                    $articles = $data['resultList']['result']; 
+                    $articles = $data['resultList']['result'];
                 } else {
-                    $articles = null; 
+                    $articles = null;
                 }
                 if($articles != null){
                 foreach ($articles as &$article) {
