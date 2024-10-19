@@ -10,15 +10,18 @@ use Illuminate\Support\Facades\Artisan;
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/sponsers', [WebsiteController::class, 'sponsers'])->name('sponsers');
 Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
-Route::get('/query-detail/{id}', [WebsiteController::class, 'query'])->name('query_detail');
+Route::get('/query-detail/{question}', [WebsiteController::class, 'query'])->name('query_detail');
 Route::post('/query', [WebsiteController::class, 'querySubmit'])->name('query');
 Route::get('/term-and-condition', [WebsiteController::class, 'terms'])->name('terms');
 Route::get('/privacy-policy', [WebsiteController::class, 'privacy'])->name('privacy');
 Route::get('/advertising', [WebsiteController::class, 'advertising'])->name('advertising');
 Route::get('/my-questions', [WebsiteController::class, 'myQuestions'])->name('myquestions');
+Route::get('/sugested-article', [WebsiteController::class, 'sugestedArticle'])->name('suggested_query');
 Route::get('/registration', [RegistrationController::class, 'signup'])->name('signup');
 Route::post('/registration', [RegistrationController::class, 'registerSubmit'])->name('register');
 Route::get('/login', [RegistrationController::class, 'login'])->name('login');
+Route::post('/query-processing', [WebsiteController::class, 'queryProcessing'])->name('queryProcessing');
+
 Route::post('/login', [RegistrationController::class, 'loginSubmit'])->name('login');
 // Clear cache route (no authentication needed)
 Route::get('/clear-all', function () {

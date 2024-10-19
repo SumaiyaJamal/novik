@@ -59,26 +59,12 @@
                 <p class="w-3/4">Question</p>
             </div>
             <ul class="list">
+                @foreach($questions as $question)
                 <li class="flex justify-around w-full">
-                    <span class="date w-1/4">22-10-2024</span>
-                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Eveniet, optio?</a></p>
+                    <span class="date w-1/4">{{ $question->created_at->diffForHumans() ?? '' }}</span>
+                    <p class="questions w-3/4 hover:text-primary"><a href="{{ route('suggested_query', ['query' => $question->text]) }}">{{ $question->text ?? '' }}</a></p>
                 </li>
-                <li class="flex justify-around w-full">
-                    <span class="date w-1/4">22-10-2024</span>
-                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Eveniet, optio?</a></p>
-                </li>
-                <li class="flex justify-around w-full">
-                    <span class="date w-1/4">22-10-2024</span>
-                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Eveniet, optio?</a></p>
-                </li>
-                <li class="flex justify-around w-full">
-                    <span class="date w-1/4">22-10-2024</span>
-                    <p class="questions w-3/4 hover:text-primary"><a href="./details.html">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Eveniet, optio?</a></p>
-                </li>
+                @endforeach
             </ul>
 
         </div>

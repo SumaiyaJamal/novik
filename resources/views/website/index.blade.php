@@ -21,7 +21,7 @@
                 <!-- Logo Container -->
                 <div>
                     <div id="logo-container" class="hidden text-white text-lg font-bold">
-                        <a href="./index.html" id="main-logo">
+                        <a href="{{ url('/') }}" id="main-logo">
                             <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-7"
                                 alt="Your Company Logo">
                         </a>
@@ -240,25 +240,16 @@
                         gastrointestinal (GI) in nature, including nausea, vomiting, diarrhea, and abdominal pain. There
                         is
                         also a risk of pancreatitis and biliary disease. Hypersensi...
-
                     </p>
                     <a class="absolute text-primary -bottom-0.5 font-semibold text-black/70 text-md right-3 bg-background ps-6 shadow-yellow-50 shadow-2xl"
                         href="{{ route('query') }}">Read More</a>
-
                 </div>
             </div>
-
-
             <div class="flex justify-end mt-6 mb-10">
                 <a href="#" class="bg-primary text-white px-3 py-1.5 rounded">See More</a>
             </div>
-
-
         </div>
     </section>
-
-
-
     <!-- scroll to top button -->
     <button id="scrollToTopBtn" class="scrollToTopBtn">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#808080"
@@ -266,6 +257,73 @@
             <polyline points="18 15 12 9 6 15" />
         </svg>
     </button>
+        <!-- footer -->
+        <footer class="px-8 md:px-28 bg-black/5 mt-20 py-8">
+            <div class="grid grid-cols-12 content-center md:space-x-10 gap-y-8">
+                <div class="col-span-12 md:col-span-3">
+                    <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10" alt="logo" />
+                </div>
+                <div class="col-span-12 md:col-span-5 flex justify-between">
+                    <div class="flex flex-col gap-y-1">
+                        <h5 class="font-semibold">Product</h5>
+                        <a href="#" class="text-sm text-gray">Ask OpenEvidence</a>
+                        <a href="#" class="text-sm text-gray">Feed</a>
+                    </div>
+                    <div class="flex flex-col gap-y-1">
+                        <h5 class="font-semibold">Company</h5>
+                        <a href="#" class="text-sm text-gray">About</a>
+                        <a href="#" class="text-sm text-gray">Announcements</a>
+                    </div>
+                    <div class="flex flex-col gap-y-1">
+                        <h5 class="font-semibold">Contact Us</h5>
+                        <a href="mailto:sponsors@novik.ai" class="text-sm text-gray">Email</a>
+                        <a href="tel:+34690957910" class="text-sm text-gray">Phone</a>
+                        <a href="https://wa.me/34690957910" class="text-sm text-gray">Whatsapp</a>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-4">
+                    <div>
+                        <h5>Don′t miss our weekly email alert.</h5>
+                        <p class="text-sm text-gray">
+                            Stay up to date on all the new findings that matter.
+                        </p>
+                    </div>
+                    <div class="flex gap-x-2 my-2">
+                        <input type="text" id="first_name"
+                            class="w-3/4 bg-gray-10 border border-gray-100 text-gray-900 ring-0 text-sm bg-transparent focus:outline-none rounded-lg focus:ring-0 block p-2.5"
+                            placeholder="Email" required />
+    
+                        <button type="submit"
+                            class="w-3/12 text-gray border bg-transparent hover:bg-slate-50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="grid grid-cols-12 mt-5 space-x-2md:space-x-10">
+                <div class="col-span-12 md:col-span-3">
+                    <p class="text-gray text-sm">
+                        © 2021 OpenEvidence. All rights reserved.
+                    </p>
+                    <p class="text-gray text-xs py-3 text-right flex">
+                        <a href="{{ route('terms') }}">Terms of Service </a> | &nbsp;
+                        <a href="{{ route('privacy') }}">Privacy Policy </a> | &nbsp;
+                        <a href="{{ route('advertising') }}">Advertising</a>
+                    </p>
+                </div>
+                <div class="col-span-12 md:col-span-9">
+                    <p class="text-sm text-gray">
+                        OpenEvidence is an experimental technology demonstrator.
+                        OpenEvidence does not provide medical advice, diagnosis or
+                        treatment. User questions and other inputs on OpenEvidence are not
+                        covered by HIPAA. It is the responsibility of the user to ensure
+                        questions do not contain protected health information (PHI) or any
+                        information that violates the privacy of any person.
+                    </p>
+                </div>
+            </div>
+        </footer>
 
     <script src="{{ asset('assets/website/js/script.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

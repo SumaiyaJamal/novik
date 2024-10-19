@@ -2,7 +2,7 @@
     <div class="container mx-auto flex justify-between items-center">
         <!-- Left Side: Logo -->
         <div class="text-white text-lg font-bold">
-            <a href="./index.html"><img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10"
+            <a href="{{ url('/') }}"><img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10"
                     alt="logo" /></a>
         </div>
         <!-- Right Side: Links and Buttons -->
