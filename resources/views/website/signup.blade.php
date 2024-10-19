@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Signup Page</title>
 
+    <style>
+        body {
+            font-family: 'Gruppo', sans-serif;
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
@@ -25,9 +30,10 @@
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none"  value="{{ old('name') }}">
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none"
+                    value="{{ old('name') }}">
                 @error('name')
-                    <span class="text-red-500">{{ $message }}</span>
+                <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-4">
@@ -35,7 +41,7 @@
                 <input type="text" id="email" name="email" placeholder="Enter your name" value="{{ old('email') }}"
                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2  focus:ring-gray focus:outline-none">
                 @error('email')
-                    <span class="text-red-500">{{ $message }}</span>
+                <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -45,7 +51,7 @@
                     <input type="password" id="password" name="password" placeholder="Enter your password"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
                     @error('password')
-                        <span class="text-red-500">{{ $message }}</span>
+                    <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="w-1/2">
@@ -55,7 +61,7 @@
                         placeholder="Enter your password"
                         class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none">
                     @error('password_confirmation')
-                        <span class="text-red-500">{{ $message }}</span>
+                    <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
             </div>
@@ -64,43 +70,60 @@
                 <div class="w-1/2">
                     <label for="country" class="block text-sm font-medium text-gray-700">Country of origin</label>
                     <input type="text" id="country" name="country" placeholder="Enter your country"
-                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none" value="{{ old('country') }}">
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none"
+                        value="{{ old('country') }}">
                     @error('country')
-                        <span class="text-red-500">{{ $message }}</span>
+                    <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="w-1/2">
                     <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-                    <input type="date" id="dob" name="dob"  max="{{ date('Y-m-d') }}"
-                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none" value="{{ old('dob') }}">
+                    <input type="date" id="dob" name="dob" max="{{ date('Y-m-d') }}"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray focus:outline-none"
+                        value="{{ old('dob') }}">
                     @error('dob')
-                        <span class="text-red-500">{{ $message }}</span>
+                    <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
             </div>
 
             <div class="mb-4">
                 <label for="occupation" class="block mb-2 text-sm font-medium text-black/80">Occupation</label>
-                <select id="occupation" name="occupation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
+                <select id="occupation" name="occupation"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary block w-full p-2.5">
                     <option value="">Select a profession</option>
-                    <option value="General Dentist" {{ old('occupation') == 'General Dentist' ? 'selected' : '' }}>General Dentist</option>
-                    <option value="Orthodontist" {{ old('occupation') == 'Orthodontist' ? 'selected' : '' }}>Orthodontist</option>
-                    <option value="Periodontist" {{ old('occupation') == 'Periodontist' ? 'selected' : '' }}>Periodontist</option>
-                    <option value="Endodontist" {{ old('occupation') == 'Endodontist' ? 'selected' : '' }}>Endodontist</option>
-                    <option value="Oral and Maxillofacial Surgeon" {{ old('occupation') == 'Oral and Maxillofacial Surgeon' ? 'selected' : '' }}>Oral and Maxillofacial Surgeon</option>
-                    <option value="Paediatric Dentist" {{ old('occupation') == 'Paediatric Dentist' ? 'selected' : '' }}>Paediatric Dentist</option>
-                    <option value="Prosthodontist" {{ old('occupation') == 'Prosthodontist' ? 'selected' : '' }}>Prosthodontist</option>
-                    <option value="Cosmetic Dentist" {{ old('occupation') == 'Cosmetic Dentist' ? 'selected' : '' }}>Cosmetic Dentist</option>
-                    <option value="Legal and Forensic Dentist" {{ old('occupation') == 'Legal and Forensic Dentist' ? 'selected' : '' }}>Legal and Forensic Dentist</option>
-                    <option value="Geriatric Dentist" {{ old('occupation') == 'Geriatric Dentist' ? 'selected' : '' }}>Geriatric Dentist</option>
-                    <option value="Sports Dentist" {{ old('occupation') == 'Sports Dentist' ? 'selected' : '' }}>Sports Dentist</option>
-                    <option value="Dental Student" {{ old('occupation') == 'Dental Student' ? 'selected' : '' }}>Dental Student</option>
-                    <option value="Hygienist" {{ old('occupation') == 'Hygienist' ? 'selected' : '' }}>Hygienist</option>
-                    <option value="Laboratory Technician" {{ old('occupation') == 'Laboratory Technician' ? 'selected' : '' }}>Laboratory Technician</option>
-                    <option value="Other" {{ old('occupation') == 'Other' ? 'selected' : '' }}>Other</option>
+                    <option value="General Dentist" {{ old('occupation')=='General Dentist' ? 'selected' : '' }}>General
+                        Dentist</option>
+                    <option value="Orthodontist" {{ old('occupation')=='Orthodontist' ? 'selected' : '' }}>Orthodontist
+                    </option>
+                    <option value="Periodontist" {{ old('occupation')=='Periodontist' ? 'selected' : '' }}>Periodontist
+                    </option>
+                    <option value="Endodontist" {{ old('occupation')=='Endodontist' ? 'selected' : '' }}>Endodontist
+                    </option>
+                    <option value="Oral and Maxillofacial Surgeon" {{
+                        old('occupation')=='Oral and Maxillofacial Surgeon' ? 'selected' : '' }}>Oral and Maxillofacial
+                        Surgeon</option>
+                    <option value="Paediatric Dentist" {{ old('occupation')=='Paediatric Dentist' ? 'selected' : '' }}>
+                        Paediatric Dentist</option>
+                    <option value="Prosthodontist" {{ old('occupation')=='Prosthodontist' ? 'selected' : '' }}>
+                        Prosthodontist</option>
+                    <option value="Cosmetic Dentist" {{ old('occupation')=='Cosmetic Dentist' ? 'selected' : '' }}>
+                        Cosmetic Dentist</option>
+                    <option value="Legal and Forensic Dentist" {{ old('occupation')=='Legal and Forensic Dentist'
+                        ? 'selected' : '' }}>Legal and Forensic Dentist</option>
+                    <option value="Geriatric Dentist" {{ old('occupation')=='Geriatric Dentist' ? 'selected' : '' }}>
+                        Geriatric Dentist</option>
+                    <option value="Sports Dentist" {{ old('occupation')=='Sports Dentist' ? 'selected' : '' }}>Sports
+                        Dentist</option>
+                    <option value="Dental Student" {{ old('occupation')=='Dental Student' ? 'selected' : '' }}>Dental
+                        Student</option>
+                    <option value="Hygienist" {{ old('occupation')=='Hygienist' ? 'selected' : '' }}>Hygienist</option>
+                    <option value="Laboratory Technician" {{ old('occupation')=='Laboratory Technician' ? 'selected'
+                        : '' }}>Laboratory Technician</option>
+                    <option value="Other" {{ old('occupation')=='Other' ? 'selected' : '' }}>Other</option>
                 </select>
                 @error('occupation')
-                    <span class="text-red-500">{{ $message }}</span>
+                <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div class="flex items-center mt-5 py-5 policy">
@@ -109,12 +132,12 @@
                 <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I have
                     read and agree to the <a href="{{ route('privacy') }}"
                         class="text-blue-600 dark:text-blue-500 hover:underline">Privacy Policy</a>,
-                        <a href="{{ route('terms') }}"
-                        class="text-blue-600 dark:text-blue-500 hover:underline">Terms</a> and <a href="{{ route('advertising') }}"
+                    <a href="{{ route('terms') }}" class="text-blue-600 dark:text-blue-500 hover:underline">Terms</a>
+                    and <a href="{{ route('advertising') }}"
                         class="text-blue-600 dark:text-blue-500 hover:underline">Advertising Policy</a></label>
             </div>
             @error('policy')
-                <span class="text-red-500">{{ $message }}</span>
+            <span class="text-red-500">{{ $message }}</span>
             @enderror
             <button type="submit"
                 class="w-full !bg-primary/90 text-white py-2 rounded-md hover:bg-primary focus:outline-none focus:ring-0 focus:ring-opacity-50">
@@ -131,22 +154,22 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @if (session('message') && session('type'))
-        <script>
-            $(document).ready(function() {
-                const message = "{{ session('message') }}";
-                const type = "{{ session('type') }}";
+    <script>
+        $(document).ready(function () {
+            const message = "{{ session('message') }}";
+            const type = "{{ session('type') }}";
 
-                Swal.fire({
-                    title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
-                    text: message,
-                    icon: type,
-                    confirmButtonText: 'Okay'
-                });
+            Swal.fire({
+                title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
+                text: message,
+                icon: type,
+                confirmButtonText: 'Okay'
             });
-        </script>
+        });
+    </script>
     @endif
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#signupForm").validate({
                 rules: {
                     name: {
@@ -212,7 +235,7 @@
                         required: "You must agree to the terms and conditions."
                     }
                 },
-                errorPlacement: function(error, element) {
+                errorPlacement: function (error, element) {
                     // Customize where the error messages will be displayed
                     error.addClass('text-red-500'); // Add class for styling
 
@@ -223,7 +246,7 @@
                         error.insertAfter(element); // Default placement for other fields
                     }
                 },
-                submitHandler: function(form) {
+                submitHandler: function (form) {
                     form.submit(); // Submit the form if valid
                 }
             });
