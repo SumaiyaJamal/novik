@@ -54,13 +54,23 @@ class RegistrationController extends Controller
 
         // Attempt to log the user in
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // Authentication passed, redirect to the home page
-            return redirect()->route('home')->with(['type'=>'success', 'message'=>'Login Successfully!']);// Use the intended method to redirect to the originally requested page or home
+            // Authentication passed, retrieve the user
+            $user = Auth::user();
+
+            // Check if the user has an admin role
+            if ($user->hasRole('admin')){
+                // Redirect to the admin dashboard
+                return redirect()->route('dashboard')->with(['type'=>'success', 'message'=>'Welcome, Admin!']);
+            }
+
+            // For non-admin users, redirect to the home page
+            return redirect()->route('home')->with(['type'=>'success', 'message'=>'Login Successfully!']);
         }
 
         // If authentication fails, redirect back with an error message
         return redirect()->back()->withErrors([
-            'crediancials' => 'The provided credentials do not match our records.',
-        ])->withInput($request->only('crediancials'));
+            'credentials' => 'The provided credentials do not match our records.',
+        ])->withInput($request->only('email'));
     }
+
 }

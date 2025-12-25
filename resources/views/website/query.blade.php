@@ -26,7 +26,7 @@
         .spinner {
             border: 8px solid rgba(0, 0, 0, 0.1);
             /* Light background color */
-            border-left-color: #e4643d;  
+            border-left-color: #e4643d;
             /* Spinner color */
             border-radius: 50%;
             width: 40px;
@@ -56,25 +56,31 @@
     @include('website.layout.navbar')
     <section class=" flex justify-center my-5 mb-40 px-2">
         <div class="container w-full md:w-3/5 rounded-2xl bg min-h-screen ">
-            <form class="relative z-50 px-1 md:px-10 rounded-lg flex w-full md:w-full py-5" method="POST"
+            <form id="queryForm" enctype="multipart/form-data" action="{{ route('query') }}" method="POST" class="relative z-50 px-1 md:px-10 rounded-lg flex w-full md:w-full py-5"
                 aria-label="Query Submission Form">
+                @csrf
                 <div class="bg-white z-50 w-full flex py-1 border border-gray/40 rounded-3xl shadow px-2">
                     <input type="file" name="file" id="file-input" hidden>
                     <textarea style="font-family: 'Gruppo';" class="bg-transparent flex-grow p-2 py-5 px-3 font-sans border-none outline-none resize-none" name="query"
                         id="query" rows="1" placeholder="Type your query here..."
                         oninput="this.style.height = 'auto'; this.style.height = `${this.scrollHeight}px`;" aria-label="Input query">{{ $question->text ?? '' }}</textarea>
-                    <button
-                        class="group hover:bg-gray/30 self-center h-10 w-10 text-white p-2 rounded-full flex items-center justify-center hover:bg-opacity-90"
-                        type="submit" aria-label="Submit question" title="Edit this">
-                        <svg width="18px" height="18px" class="fill-none hover:fill-gray" viewBox="0 0 24 24"
-                            id="_24x24_On_Light_Edit" data-name="24x24/On Light/Edit"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect id="view-box" width="24" height="24" fill="none" />
-                            <path id="Shape"
-                                d="M.75,17.5A.751.751,0,0,1,0,16.75V12.569a.755.755,0,0,1,.22-.53L11.461.8a2.72,2.72,0,0,1,3.848,0L16.7,2.191a2.72,2.72,0,0,1,0,3.848L5.462,17.28a.747.747,0,0,1-.531.22ZM1.5,12.879V16h3.12l7.91-7.91L9.41,4.97ZM13.591,7.03l2.051-2.051a1.223,1.223,0,0,0,0-1.727L14.249,1.858a1.222,1.222,0,0,0-1.727,0L10.47,3.91Z"
-                                transform="translate(3.25 3.25)" fill="#141124" />
-                        </svg>
-                    </button>
+                        <button class="group hover:bg-gray/30 self-center h-10 bg-black w-10 text-white p-2 rounded-full flex items-center justify-center hover:bg-opacity-90" type="submit" aria-label="Submit question">
+                            <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 492.004 492.004" xml:space="preserve" stroke="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136 c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002 v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864 c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872 l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
                 </div>
             </form>
             <h3></h3>
@@ -91,7 +97,6 @@
                 </div>
                 <!-- Horizontal line -->
                 <hr class="text-gray/40 mt-3">
-
                 <!-- Accordion -->
                 <div class="accordion mt-10">
                     <div class="accordion-header" onclick="handleAccording(this)">
@@ -132,7 +137,7 @@
                                 <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
                             </svg>
                         </span>
-                    </a>                    
+                    </a>
                     <a href="{{ route('suggested_query', ['query' => 'What is the impact of GLP-1 RAs on skin?']) }}" class="flex justify-between gap-5 hover:text-gray border-b border-gray/20 py-3">
                         <p>What is the impact of GLP-1 RAs on skin?</p>
                         <span>
@@ -142,7 +147,6 @@
                             </svg>
                         </span>
                     </a>
-                    
                     <a href="{{ route('suggested_query', ['query' => 'What is the treatment of choice for necrotizing fasciitis in pediatrics?']) }}" class="flex justify-between gap-5 hover:text-gray border-b border-gray/20 py-3">
                         <p>What is the treatment of choice for necrotizing fasciitis in pediatrics?</p>
                         <span>
@@ -152,13 +156,12 @@
                             </svg>
                         </span>
                     </a>
-                    
+
                 </div>
             </div>
 
         </div>
     </section>
-
     <section class=" fixed left-0 bottom-0 flex items-end h-52 w-full ">
         <div class="px-1 shadow w-full md:px-10 flex justify-center border-t border-gray/30 backdrop-blur-2xl z-50">
             <form enctype="multipart/form-data" action="{{ route('query') }}" method="POST"
@@ -325,9 +328,6 @@
             }
         });
     </script>
-
-
-
     <script src="{{ asset('assets/website/js/script.js') }}"></script>
 </body>
 

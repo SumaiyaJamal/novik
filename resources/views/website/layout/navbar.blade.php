@@ -12,7 +12,7 @@
                 <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
                 <li><a href="{{ route('contact') }}" aria-label="About">Contact</a></li>
                 <li>
-                    <a href="{{ route('sponsers') }}" aria-label="Announcements">Sponsers</a>
+                    <a href="{{ route('sponsers') }}" aria-label="Announcements">Partners</a>
                 </li>
                 @guest
                 <li>

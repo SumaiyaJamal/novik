@@ -24,14 +24,14 @@
             </div>
             <div class="col-span-12 md:col-span-5 flex justify-between">
                 <div class="flex flex-col gap-y-1">
-                    <h5 class="font-semibold">Product</h5>
+                    {{-- <h5 class="font-semibold">Product</h5>
                     <a href="#" class="text-sm text-gray">Ask OpenEvidence</a>
-                    <a href="#" class="text-sm text-gray">Feed</a>
+                    <a href="#" class="text-sm text-gray">Feed</a> --}}
                 </div>
                 <div class="flex flex-col gap-y-1">
-                    <h5 class="font-semibold">Company</h5>
+                    {{-- <h5 class="font-semibold">Company</h5>
                     <a href="#" class="text-sm text-gray">About</a>
-                    <a href="#" class="text-sm text-gray">Announcements</a>
+                    <a href="#" class="text-sm text-gray">Announcements</a> --}}
                 </div>
                 <div class="flex flex-col gap-y-1">
                     <h5 class="font-semibold">Contact Us</h5>
@@ -63,7 +63,7 @@
         <div class="grid grid-cols-12 mt-5 space-x-2md:space-x-10">
             <div class="col-span-12 md:col-span-3">
                 <p class="text-gray text-sm">
-                    © 2021 OpenEvidence. All rights reserved.
+                    © 2024 OpenEvidence. All rights reserved.
                 </p>
                 <p class="text-gray text-xs py-3 text-right flex">
                     <a href="{{ route('terms') }}">Terms of Service </a> | &nbsp;

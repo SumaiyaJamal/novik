@@ -16,6 +16,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <style>
+        body {
+                   font-family: 'Gruppo', sans-serif;
+               }
+           </style>
 </head>
 
 <body class="flex items-center justify-center min-h-screen bg-gray-100 ">

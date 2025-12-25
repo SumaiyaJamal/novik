@@ -47,8 +47,8 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function profile(): HasOne
+    public function profile(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(Profile::class);
     }
 }

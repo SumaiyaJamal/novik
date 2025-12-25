@@ -34,7 +34,7 @@
                         <li><a href="{{ route('home') }}" aria-label="Ask">Home</a></li>
                         <!-- <li><a href="./feed.html" aria-label="Feed">Feed</a></li> -->
                         <li><a href="{{ route('contact') }}" aria-label="contact.html">Contact</a></li>
-                        <li><a href="{{ route('sponsers') }}" aria-label="Announcements">Sponsers</a></li>
+                        <li><a href="{{ route('sponsers') }}" aria-label="Announcements">Partners</a></li>
                         @guest
                         <li><a href="{{ route('signup') }}" aria-label="Announcements">Register</a></li>
                         @endguest
@@ -51,7 +51,6 @@
                 </div>
 
                 <!-- user poper -->
-
                 <!-- Hamburger Menu -->
                 <button id="navbar-toggle" class="md:hidden p-2 text-black focus:outline-none"
                     aria-label="Toggle mobile menu">
@@ -61,7 +60,6 @@
                     </svg>
                 </button>
             </nav>
-
             <!-- Mobile Menu -->
             <div id="navbar"
                 class="hidden px-4 z-[99999999] mt-6 bg-white/50 backdrop-blur- shadow md:hidden flex flex-col space-y-2 py-5">
@@ -105,10 +103,16 @@
                                     fill="#1C274C" />
                             </svg>
                         </button>
-                        <textarea class="bg-transparent flex-grow p-2 px-3 border-none outline-none resize-none" name="query" id="query"
-                            rows="1" placeholder="Type your query here..."
+                        <textarea id="main_search_area" class="bg-transparent flex-grow p-2 px-3 border-none outline-none resize-none"
+                            name="query" rows="1" placeholder="Type your query here..."
                             oninput="this.style.height = 'auto'; this.style.height = `${this.scrollHeight}px`;" aria-label="Input query"></textarea>
-                        <button
+                            @if (session('name'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+
+                        {{-- <button id="startRecording"
                             class="bg-black h-10 text-white p-2 rounded-full flex items-center justify-center hover:bg-opacity-90"
                             type="submit" aria-label="Submit question">
                             <svg fill="#000000" class="fill-white" height="24px" width="24px"
@@ -120,11 +124,43 @@
                                         d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z" />
                                 </g>
                             </svg>
+                        </button> --}}
+
+                        {{-- <button id="stopRecording"
+                            class="bg-black h-10 text-white p-2 rounded-full flex items-center justify-center hover:bg-opacity-90"
+                            type="button" aria-label="Submit question">
+                            <svg fill="#e4643d" class="fill-orange" height="24px" width="24px"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <g>
+                                    <path
+                                        d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-64,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z" />
+                                    <path
+                                        d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z" />
+                                </g>
+                            </svg>
+                        </button> --}}
+                        <button class="group hover:bg-gray/30 self-center h-10 bg-black w-10 text-white p-2 rounded-full flex items-center justify-center hover:bg-opacity-90"
+                            type="submit" aria-label="Submit question">
+                            <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 492.004 492.004" xml:space="preserve" stroke="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136 c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002 v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864 c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872 l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
                         </button>
                     </div>
                 </form>
+                {{-- <audio id="audioPlayback" controls></audio> --}}
             </div>
-
             <!-- Powered By Section -->
             <div class="text-center">
                 <h3 class="text-xl text-gray-700 mt-20">Powered By</h3>
@@ -143,12 +179,15 @@
             <div>
                 <h3 class="text-center text-3xl py-4 text-gray-700 mb-5">Our Sponsors</h3>
                 <div class="flex justify-center gap-x-10">
-                    <img src="{{ asset('assets/website/sponsers/logo1.avif') }}" class="h-8 md:h-10"
+                    @foreach($banners as $banner)
+                        @if($banner->image)
+                            <img src="{{ asset('website/' . $banner->image) }}" class="img-fluid h-8 md:h-10" alt="Sponsor Logo {{ $banner->id }}">
+                        @endif
+                    @endforeach
+                    {{-- <img src="{{ asset('assets/website/sponsers/logo1.avif') }}" class="h-8 md:h-10"
                         alt="Sponsor Logo 1">
                     <img src="{{ asset('assets/website/sponsers/logo1.avif') }}" class="h-8 md:h-10"
-                        alt="Sponsor Logo 1">
-                    <img src="{{ asset('assets/website/sponsers/logo1.avif') }}" class="h-8 md:h-10"
-                        alt="Sponsor Logo 1">
+                        alt="Sponsor Logo 1"> --}}
                 </div>
             </div>
         </main>
@@ -179,7 +218,7 @@
     </section> -->
 
 
-    <section class="flex justify-center mt-20">
+    {{-- <section class="flex justify-center mt-20">
         <div class="container px-8 w-full md:w-3/5 ">
             <!-- query question-1 -->
             <div class="mt-5 border-b py-4 border-gray/20">
@@ -249,7 +288,7 @@
                 <a href="#" class="bg-primary text-white px-3 py-1.5 rounded">See More</a>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- scroll to top button -->
     <button id="scrollToTopBtn" class="scrollToTopBtn">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#808080"
@@ -257,29 +296,22 @@
             <polyline points="18 15 12 9 6 15" />
         </svg>
     </button>
-        <!-- footer -->
-        <footer class="px-8 md:px-28 bg-black/5 mt-20 py-8">
-            <div class="grid grid-cols-12 content-center md:space-x-10 gap-y-8">
-                <div class="col-span-12 md:col-span-3">
-                    <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10" alt="logo" />
+    <!-- footer -->
+    <footer style="margin-top:0px" class="px-8 md:px-28 bg-black/5 mt-20 py-8">
+        <div class="grid grid-cols-12 content-center md:space-x-10 gap-y-8">
+            <div class="col-span-12 md:col-span-3">
+                <img src="{{ asset('assets/website/background/logo.svg') }}" class="h-10" alt="logo" />
+            </div>
+            <div class="col-span-12 md:col-span-5 flex justify-between">
+                <div class="flex flex-col gap-y-1">
+                    {{-- <h5 class="font-semibold">Product</h5>
+                    <a href="#" class="text-sm text-gray">Ask OpenEvidence</a>
+                    <a href="#" class="text-sm text-gray">Feed</a> --}}
                 </div>
-                <div class="col-span-12 md:col-span-5 flex justify-between">
-                    <div class="flex flex-col gap-y-1">
-                        <h5 class="font-semibold">Product</h5>
-                        <a href="#" class="text-sm text-gray">Ask OpenEvidence</a>
-                        <a href="#" class="text-sm text-gray">Feed</a>
-                    </div>
-                    <div class="flex flex-col gap-y-1">
-                        <h5 class="font-semibold">Company</h5>
-                        <a href="#" class="text-sm text-gray">About</a>
-                        <a href="#" class="text-sm text-gray">Announcements</a>
-                    </div>
-                    <div class="flex flex-col gap-y-1">
-                        <h5 class="font-semibold">Contact Us</h5>
-                        <a href="mailto:sponsors@novik.ai" class="text-sm text-gray">Email</a>
-                        <a href="tel:+34690957910" class="text-sm text-gray">Phone</a>
-                        <a href="https://wa.me/34690957910" class="text-sm text-gray">Whatsapp</a>
-                    </div>
+                <div class="flex flex-col gap-y-1">
+                    {{-- <h5 class="font-semibold">Company</h5>
+                    <a href="#" class="text-sm text-gray">About</a>
+                    <a href="#" class="text-sm text-gray">Announcements</a> --}}
                 </div>
                 <div class="col-span-12 md:col-span-4">
                     <div>
@@ -292,7 +324,7 @@
                         <input type="text" id="first_name"
                             class="w-3/4 bg-gray-10 border border-gray-100 text-gray-900 ring-0 text-sm bg-transparent focus:outline-none rounded-lg focus:ring-0 block p-2.5"
                             placeholder="Email" required />
-    
+
                         <button type="submit"
                             class="w-3/12 text-gray border bg-transparent hover:bg-slate-50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">
                             Submit
@@ -300,7 +332,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid grid-cols-12 mt-5 space-x-2md:space-x-10">
                 <div class="col-span-12 md:col-span-3">
                     <p class="text-gray text-sm">
@@ -323,7 +355,31 @@
                     </p>
                 </div>
             </div>
-        </footer>
+        </div>
+
+        <div class="grid grid-cols-12 mt-5 space-x-2md:space-x-10">
+            <div class="col-span-12 md:col-span-3">
+                <p class="text-gray text-sm">
+                    © 2024 OpenEvidence. All rights reserved.
+                </p>
+                <p class="text-gray text-xs py-3 text-right flex">
+                    <a href="{{ route('terms') }}">Terms of Service </a> | &nbsp;
+                    <a href="{{ route('privacy') }}">Privacy Policy </a> | &nbsp;
+                    <a href="{{ route('advertising') }}">Advertising</a>
+                </p>
+            </div>
+            <div class="col-span-12 md:col-span-9">
+                <p class="text-sm text-gray">
+                    OpenEvidence is an experimental technology demonstrator.
+                    OpenEvidence does not provide medical advice, diagnosis or
+                    treatment. User questions and other inputs on OpenEvidence are not
+                    covered by HIPAA. It is the responsibility of the user to ensure
+                    questions do not contain protected health information (PHI) or any
+                    information that violates the privacy of any person.
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="{{ asset('assets/website/js/script.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -331,15 +387,13 @@
 
     @if(session('message') && session('type'))
     <script>
-        $(document).ready(function () {
-            const message = "{{ session('message') }}";
-            const type = "{{ session('type') }}";
-
-            Swal.fire({
-                title: type.charAt(0).toUpperCase() + type.slice(1), // Capitalize the first letter
-                text: message,
-                icon: type,
-                confirmButtonText: 'Okay'
+        $(document).ready(function() {
+            $('#main_search_area').on('keydown', function(event) {
+                // Check if the pressed key is Enter (key code 13)
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Prevent the default action (like a newline)
+                    $('#queryForm').submit(); // Submit the form
+                }
             });
         });
     </script>

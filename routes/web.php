@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\Artisan;
 
 // Public routes (no authentication needed)
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
-Route::get('/sponsers', [WebsiteController::class, 'sponsers'])->name('sponsers');
+Route::get('/partners', [WebsiteController::class, 'sponsers'])->name('sponsers');
+Route::post('/sponser-submit', [WebsiteController::class, 'sponsersSubmit'])->name('sponser_post');
 Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
+Route::post('/contact', [WebsiteController::class, 'contactSubmit'])->name('contact_post');
 Route::get('/query-detail/{question}', [WebsiteController::class, 'query'])->name('query_detail');
 Route::post('/query', [WebsiteController::class, 'querySubmit'])->name('query');
 Route::get('/term-and-condition', [WebsiteController::class, 'terms'])->name('terms');
+Route::get('/error', [WebsiteController::class, 'error'])->name('error');
 Route::get('/privacy-policy', [WebsiteController::class, 'privacy'])->name('privacy');
 Route::get('/advertising', [WebsiteController::class, 'advertising'])->name('advertising');
 Route::get('/my-questions', [WebsiteController::class, 'myQuestions'])->name('myquestions');
@@ -36,8 +39,17 @@ Route::get('/migrate', function () {
     return response()->json(['message' => 'Migrations have been run successfully.']);
 });
 // Protected routes (authentication required)
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/banners', [DashboardController::class, 'banners'])->name('banners');
+    Route::get('/users', [DashboardController::class, 'users'])->name('users');
+    Route::post('/post-banners', [DashboardController::class, 'postBanners'])->name('post_banners');
+    Route::get('/partners-contact', [DashboardController::class, 'sponsersContact'])->name('sponsers_contact');
+    Route::get('/user-contact', [DashboardController::class, 'usersContact'])->name('users_contact');
+    Route::get('/delete-contact/{id}', [DashboardController::class, 'deleteContact'])->name('delete_contact');
+    Route::get('/delete-sponser-contact/{id}', [DashboardController::class, 'deleteSponserContact'])->name('delete_sponser_contact');
+    Route::get('/download-csv', [DashboardController::class, 'downloadCsv'])->name('download.csv');
+
 });
 
 Route::get('/logout', function () {
